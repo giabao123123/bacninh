@@ -1,0 +1,3379 @@
+<!doctype html>
+<html>
+  <head>
+    <title>BẮC NINH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="logo bắc ninh/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./web con.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style></style>
+  </head>
+  <body class="w3-light-grey" style="padding-top: 110px" id="hero">
+    <a href="#hero" class="scroll-top-button">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+    <aside id="backToTop">
+      <a href="#hero" aria-label="Lên đầu trang">
+        <span class="arrow arrow-1"></span>
+        <span class="arrow arrow-2"></span>
+      </a>
+    </aside>
+    <aside class="box w3-right" style="margin-top: 2%">
+      <p class="text">Chào mừng đến với tỉnh Bắc Ninh!</p>
+    </aside>
+
+    <header class="w3-top">
+      <nav
+        class="w3-bar w3-white w3-padding w3-card"
+        style="letter-spacing: 4px"
+      >
+        <a href="#home" class="w3-bar-item neon-box">BẮC NINH</a>
+        <button class="scroll-btn left-btn w3-hide-small w3-hide-medium">
+          ❮
+        </button>
+        <button class="scroll-btn right-btn w3-hide-small w3-hide-medium">
+          ❯
+        </button>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul
+          style="
+            background: linear-gradient(180deg, #ff9800, #ff5722);
+            color: #fffaf0;
+          "
+          class="menu w3-right w3-button"
+          id="menu-list"
+        >
+          <li><a href="#about">LỊCH SỬ HÌNH THÀNH</a></li>
+          <li><a href="#menu">ĐỊA LÝ</a></li>
+          <li><a href="#khihau">KHÍ HẬU</a></li>
+          <li><a href="#DIEUKIENTUNHIEN">ĐIỀU KIỆN TỰ NHIÊN</a></li>
+          <li>
+            <a href="#THOITIET" class="w3-bar-item w3-button"
+              >DỰ BÁO THỜI TIẾT TRONG TỈNH</a
+            >
+          </li>
+          <li><a href="#contact">DÂN SỐ</a></li>
+          <li><a href="#VANHOA">VĂN HOÁ</a></li>
+          <li><a href="#DITICH">DI TÍCH, DI SẢN VĂN HOÁ</a></li>
+          <li><a href="#GIAODUC">GIÁO DỤC</a></li>
+          <li><a href="#KINHTE">KINH TẾ</a></li>
+          <li><a href="#AMTHUC">ẨM THỰC</a></li>
+          <li><a href="#DULICH">DU LỊCH</a></li>
+          <li><a href="#tiemnang">TIỀM NĂNG PHÁT TRIÊN</a></li>
+          <li>
+            <a href="https://giabao123123.github.io/trochoibacninh/">TRÒ CHƠI</a>
+          </li>
+        </ul>
+        <script>
+          const menuLinks = document.querySelectorAll("#menu-list a");
+          const menuToggle = document.getElementById("menu-toggle");
+          menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth <= 768) {
+                menuToggle.checked = false;
+              }
+            });
+          });
+        </script>
+        <script>
+          const audio = document.getElementById("bgMusic");
+          const btn = document.getElementById("toggleBtn");
+          if (btn && audio) {
+            btn.addEventListener("click", () => {
+              if (audio.paused) {
+                audio.play();
+                btn.textContent = "⏸ Tắt nhạc";
+              } else {
+                audio.pause();
+                btn.textContent = "▶ Phát nhạc";
+              }
+            });
+          }
+        </script>
+        <nav
+          style="
+            background: linear-gradient(180deg, #ff9800, #ff5722);
+            color: #fff3cd;
+          "
+          class="w3-animate-left w3-hide-small neon-box"
+        >
+          <div class="menu-scroll">
+            <a href="#about" class="w3-bar-item w3-button"
+              >LỊCH SỬ HÌNH THÀNH</a
+            >
+            <a href="#menu" class="w3-bar-item w3-button">ĐỊA LÝ</a>
+            <a href="#DIEUKIENTUNHIEN" class="w3-bar-item w3-button"
+              >ĐIỀU KIỆN TỰ NHIÊN</a
+            >
+            <a href="#khihau" class="w3-bar-item w3-button">KHÍ HẬU</a>
+            <a href="#THOITIET" class="w3-bar-item w3-button"
+              >DỰ BÁO THỜI TIẾT TRONG TỈNH</a
+            >
+            <a href="#contact" class="w3-bar-item w3-button">DÂN SỐ</a>
+            <a href="#VANHOA" class="w3-bar-item w3-button">VĂN HOÁ</a>
+            <a href="#DITICH" class="w3-bar-item w3-button"
+              >DI TÍCH, DI SẢN VĂN HOÁ</a
+            >
+            <a href="#GIAODUC" class="w3-bar-item w3-button">GIÁO DỤC</a>
+            <a href="#KINHTE" class="w3-bar-item w3-button">KINH TẾ</a>
+            <a href="#AMTHUC" class="w3-bar-item w3-button">ẨM THỰC</a>
+            <a href="#DULICH" class="w3-bar-item w3-button">DU LỊCH</a>
+            <a href="#tiemnang" class="w3-bar-item w3-button"
+              >TIỀM NĂNG PHÁT TRIÊN</a
+            >
+            <a
+              href="https://giabao123123.github.io/trochoibacninh/"
+              class="w3-bar-item w3-button"
+              >TRÒ CHƠI</a
+            >
+          </div>
+        </nav>
+      </nav>
+      <script>
+        const menuScroll = document.querySelector(".menu-scroll");
+        const btnLeft = document.querySelector(".left-btn");
+        const btnRight = document.querySelector(".right-btn");
+        // Khoảng dịch chuyển mỗi lần bấm (px)
+        const step = 200;
+        if (btnRight && btnLeft && menuScroll) {
+          btnRight.addEventListener("click", () => {
+            menuScroll.scrollLeft += step;
+          });
+          btnLeft.addEventListener("click", () => {
+            menuScroll.scrollLeft -= step;
+          });
+        }
+      </script>
+    </header>
+
+    <main class="w3-content" style="max-width: 1100px">
+      <section class="w3-row w3-padding-16 w3-center" id="about">
+        <h1 class="w3-center" style="color: red; font-size: 50px">
+          LỊCH SỬ HÌNH THÀNH
+        </h1>
+        <article>
+          <p class="w3-large">
+            Lịch sử Bắc Ninh bắt đầu từ thời kỳ Hồng Bàng với bộ Vũ Ninh, về sau
+            trở thành một phần của xứ Kinh Bắc – trung tâm văn hóa và tín ngưỡng
+            quan trọng của Đại Việt. Đến thời nhà Nguyễn, năm 1822, vùng đất này
+            được đổi tên thành tỉnh Bắc Ninh. Trải qua thời Pháp thuộc rồi nhiều
+            biến động hành chính, năm 1931 Bắc Ninh được xác lập là một tỉnh,
+            sau đó có giai đoạn sáp nhập với Bắc Giang để thành lập tỉnh Hà Bắc,
+            trước khi tách ra vào năm 1997 để trở thành tỉnh riêng biệt. Gần đây
+            nhất (năm 2025), có chủ trương sáp nhập trở lại với Bắc Giang thành
+            một tỉnh mới mang tên Bắc Ninh, nhằm củng cố vị thế “trái tim văn
+            hóa Kinh Bắc”, gắn với sự phát triển kinh tế năng động và di sản
+            quan họ lâu đời. Hiện nay, Bắc Ninh là một tỉnh thuộc vùng đồng bằng
+            sông Hồng, nằm ở phía Bắc Việt Nam, sở hữu bề dày lịch sử cùng nhiều
+            di tích văn hóa – lịch sử nổi tiếng.
+          </p>
+        </article>
+        <figure>
+          <img
+            src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-bac-ninh-cover.jpg"
+            style="width: 100%"
+            alt="Lịch sử Bắc Ninh"
+          />
+          <figcaption style="font-size: 15px">
+            (nguồn thông tin và hình ảnh:
+            <a
+              href="https://www.traveloka.com/vi-vn/explore/destination/dia-diem-du-lich-bac-ninh/121897"
+              target="_blank"
+              >traveloka.com</a
+            >
+            |
+            <a
+              href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
+              target="_blank"
+              >wiki Bắc Ninh</a
+            >
+            )
+          </figcaption>
+        </figure>
+      </section>
+      <hr />
+
+      <section class="w3-row-padding w3-padding-16" id="menu">
+        <h1 class="w3-padding-16 w3-center" style="color: red; font-size: 50px">
+          ĐỊA LÝ
+        </h1>
+        <article>
+          <p><b>-Điểm cực của tỉnh:</b></p>
+          <ul>
+            <li><p>Điểm cực Tây tại: thôn Đa Hội, xã Hợp Thịnh.</p></li>
+            <li>
+              <p>
+                Điểm cực đông tại: khu bảo tồn thiên nhiên Khe Rỗ, xã An Lạc.
+              </p>
+            </li>
+            <li><p>Điểm cực bắc tại: vùng núi Gốc Bòng, xã Xuân Lương.</p></li>
+            <li>
+              <p>
+                Điểm cực Nam tại: thôn Ngọc Quan (hoặc làng Sen), xã Lâm Thao.
+              </p>
+            </li>
+          </ul>
+          <p><b>-Tiếp giáp:</b></p>
+          <ul>
+            <li><p>Phía đông giáp tỉnh Quảng Ninh</p></li>
+            <li><p>Phía tây giáp thủ đô Hà Nội</p></li>
+            <li><p>Phía nam giáp thành phố Hải Phòng và tỉnh Hưng Yên</p></li>
+            <li><p>Phía bắc giáp tỉnh Lạng Sơn và tỉnh Thái Nguyên.</p></li>
+          </ul>
+          <p style="font-size: 15px">
+            (nguồn thông tin:
+            <a
+              href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
+              target="_blank"
+              >wiki Bắc Ninh</a
+            >
+            )
+          </p>
+        </article>
+        <figure class="w3-center">
+          <img
+            src="https://cdn.thuvienphapluat.vn/uploads/nhadat/2025/NTTU/03072025/ban-do-bac-ninh.jpg"
+            class="w3-round w3-image w3-opacity-min w3-center"
+            alt="Bản đồ Bắc Ninh"
+            style="width: 75%"
+          />
+          <div class="text-overlay"></div>
+          <figcaption style="font-size: 15px">
+            (nguồn hình ảnh:
+            <a
+              href="https://thuvienphapluat.vn/phap-luat-nha-dat/ban-do-hanh-chinh-bac-ninh-sau-sap-nhap-moi-nhat-2025-bang-gia-dat-bac-ninh-2025-5202.html"
+              target="_blank"
+              >thuvienphapluat.vn</a
+            >
+            )
+          </figcaption>
+        </figure>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16" id="DIEUKIENTUNHIEN">
+        <h1 class="w3-center" style="font-size: 50px">ĐIỀU KIỆN TỰ NHIÊN</h1>
+        <article>
+          <p>
+            -Bắc Ninh nằm ở vị trí chuyển tiếp giữa vùng trung du, miền núi phía
+            Bắc và đồng bằng châu thổ sông Hồng, vì vậy địa hình của tỉnh vừa
+            mang đặc điểm của vùng núi đồi, vừa có nét đặc trưng của đồng bằng.
+            Tuy phần lớn diện tích là đồi núi và trung du, song địa hình nhìn
+            chung tương đối bằng phẳng, ít bị chia cắt mạnh, thuận lợi cho phát
+            triển kinh tế – xã hội và xây dựng đô thị. Phía bắc và đông nam của
+            tỉnh là vùng núi cao, độ cao phổ biến từ 300 đến 900 m, nằm giữa hai
+            dãy núi hình cánh cung là cánh cung Đông Triều và cánh cung Bắc Sơn.
+            Trong đó, cánh cung Đông Triều gắn với dãy núi Yên Tử có đỉnh cao
+            nhất đạt 1.068 m, tạo nên cảnh quan tự nhiên đặc sắc. Đặc biệt, khu
+            rừng nguyên sinh Khe Rỗ ở vùng núi phía đông bắc, giáp tỉnh Quảng
+            Ninh, có diện tích hơn 7.000 ha với hệ động, thực vật phong phú, góp
+            phần quan trọng trong việc bảo vệ môi trường sinh thái và đa dạng
+            sinh học của tỉnh.
+            <br />
+            -Về thủy văn, Bắc Ninh có mạng lưới sông ngòi dày đặc với mật độ khá
+            cao, trung bình từ 1 đến 1,2 km/km². Trên địa bàn tỉnh có 5 con sông
+            lớn chảy qua là sông Đuống, sông Cầu, sông Thái Bình, sông Thương và
+            sông Lục Nam – thuộc hệ thống Lục Đầu Giang. Các con sông này cung
+            cấp nguồn nước dồi dào cho sản xuất nông nghiệp, sinh hoạt và giao
+            thông đường thủy. Bên cạnh đó, tỉnh còn có nhiều sông nội địa như
+            sông Ngũ Huyện Khê, sông Dâu, sông Đông Côi, góp phần quan trọng vào
+            hệ thống tiêu thoát nước.
+            <br />
+            -Ngoài hệ thống sông, Bắc Ninh còn có nhiều hồ, đầm tự nhiên và nhân
+            tạo, tiêu biểu là hồ Cấm Sơn và hồ Khuôn Thần, vừa có giá trị về
+            điều tiết nước, vừa có tiềm năng phát triển du lịch sinh thái. Tổng
+            lượng nước mặt của tỉnh được đánh giá là khá dồi dào, kết hợp với
+            trữ lượng nước ngầm lớn, chất lượng tốt, đáp ứng nhu cầu sản xuất,
+            sinh hoạt và phát triển đô thị. Nhìn chung, điều kiện tự nhiên của
+            Bắc Ninh tương đối thuận lợi, tạo nền tảng vững chắc cho phát triển
+            kinh tế – xã hội bền vững.
+          </p>
+          <p style="font-size: 15px">
+            (nguồn thông tin:<a
+              href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
+              target="_blank"
+              >wiki Bắc Ninh</a
+            >)
+          </p>
+        </article>
+      </section>
+      <hr />
+
+      <section
+        class="w3-container w3-padding-16 table-responsive"
+        style="overflow-x: auto"
+        id="khihau"
+      >
+        <h1 style="font-size: 50px" class="w3-center">KHÍ HẬU</h1>
+        <br />
+        <article>
+          <p>
+            Bắc Ninh nằm trong vùng khí hậu cận nhiệt đới ẩm, chia làm 4 mùa rõ
+            rệt (xuân, hạ, thu, đông). Có sự chênh lệch rõ ràng về nhiệt độ giữa
+            mùa hè nóng ẩm và mùa đông khô lạnh. Sự chênh lệch đạt 15 - 16 °C.
+            Mùa mưa kéo dài từ tháng 5 đến tháng 9 hàng năm. Lượng mưa trong mùa
+            này chiếm 80% tổng lượng mưa cả năm. Lượng mưa trung bình hàng năm:
+            1.400 - 1.700 mm. Nhiệt độ trung bình: 23,3 °C. Số giờ nắng trong
+            năm: 1.530 - 1.776 giờ. Độ ẩm tương đối trung bình: 79%.
+          </p>
+
+          <table
+            style="
+              width: 100%;
+              border-color: rgb(162, 169, 177);
+              border-bottom-color: rgb(162, 169, 177);
+              background-color: rgb(234, 236, 240);
+            "
+          >
+            <tbody>
+              <tr>
+                <th colspan="14">Dữ liệu khí hậu của Bắc Ninh</th>
+              </tr>
+              <tr>
+                <th scope="row">Tháng</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">6</th>
+                <th scope="col">7</th>
+                <th scope="col">8</th>
+                <th scope="col">9</th>
+                <th scope="col">10</th>
+                <th scope="col">11</th>
+                <th scope="col">12</th>
+                <th scope="col" style="border-left-width: medium">Năm</th>
+              </tr>
+              <tr style="text-align: center">
+                <th scope="row" style="height: 16px">
+                  Trung bình ngày tối đa °C (°F)
+                </th>
+                <td style="background: #ff942a; color: #000000">
+                  19.9<br />(67.8)
+                </td>
+                <td style="background: #ff9123; color: #000000">
+                  20.4<br />(68.7)
+                </td>
+                <td style="background: #ff7f00; color: #000000">
+                  23<br />(73)
+                </td>
+                <td style="background: #ff6100; color: #000000">
+                  27.4<br />(81.3)
+                </td>
+                <td style="background: #ff4200; color: #000000">
+                  31.8<br />(89.2)
+                </td>
+                <td style="background: #ff3a00; color: #000000">
+                  33<br />(91)
+                </td>
+                <td style="background: #ff3b00; color: #000000">
+                  32.8<br />(91.0)
+                </td>
+                <td style="background: #ff4000; color: #000000">
+                  32.2<br />(90.0)
+                </td>
+                <td style="background: #ff4600; color: #000000">
+                  31.2<br />(88.2)
+                </td>
+                <td style="background: #ff5600; color: #000000">
+                  29<br />(84)
+                </td>
+                <td style="background: #ff6d00; color: #000000">
+                  25.6<br />(78.1)
+                </td>
+                <td style="background: #ff850c; color: #000000">
+                  22.1<br />(71.8)
+                </td>
+                <td
+                  style="
+                    background: #ff6100;
+                    color: #000000;
+                    border-left-width: medium;
+                  "
+                >
+                  27.37<br />(81.27)
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <th scope="row" style="height: 16px">
+                  Trung bình ngày °C (°F)
+                </th>
+                <td style="background: #ffac59; color: #000000">
+                  16.5<br />(61.7)
+                </td>
+                <td style="background: #ffa64d; color: #000000">
+                  17.4<br />(63.3)
+                </td>
+                <td style="background: #ff9429; color: #000000">
+                  20<br />(68)
+                </td>
+                <td style="background: #ff7800; color: #000000">
+                  24<br />(75)
+                </td>
+                <td style="background: #ff5f00; color: #000000">
+                  27.7<br />(81.9)
+                </td>
+                <td style="background: #ff5400; color: #000000">
+                  29.2<br />(84.6)
+                </td>
+                <td style="background: #ff5400; color: #000000">
+                  29.2<br />(84.6)
+                </td>
+                <td style="background: #ff5700; color: #000000">
+                  28.8<br />(83.8)
+                </td>
+                <td style="background: #ff5f00; color: #000000">
+                  27.7<br />(81.9)
+                </td>
+                <td style="background: #ff7000; color: #000000">
+                  25.2<br />(77.4)
+                </td>
+                <td style="background: #ff8913; color: #000000">
+                  21.6<br />(70.9)
+                </td>
+                <td style="background: #ff9e3e; color: #000000">
+                  18.5<br />(65.3)
+                </td>
+                <td
+                  style="
+                    background: #ff7900;
+                    color: #000000;
+                    border-left-width: medium;
+                  "
+                >
+                  23.82<br />(74.88)
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <th scope="row" style="height: 16px">
+                  Tối thiểu trung bình ngày °C (°F)
+                </th>
+                <td style="background: #ffc387; color: #000000">
+                  13.2<br />(55.8)
+                </td>
+                <td style="background: #ffba76; color: #000000">
+                  14.4<br />(57.9)
+                </td>
+                <td style="background: #ffa851; color: #000000">
+                  17.1<br />(62.8)
+                </td>
+                <td style="background: #ff9021; color: #000000">
+                  20.6<br />(69.1)
+                </td>
+                <td style="background: #ff7a00; color: #000000">
+                  23.7<br />(74.7)
+                </td>
+                <td style="background: #ff7400; color: #000000">
+                  24.6<br />(76.3)
+                </td>
+                <td style="background: #ff6e00; color: #000000">
+                  25.5<br />(77.9)
+                </td>
+                <td style="background: #ff6e00; color: #000000">
+                  25.4<br />(77.7)
+                </td>
+                <td style="background: #ff7700; color: #000000">
+                  24.2<br />(75.6)
+                </td>
+                <td style="background: #ff8a16; color: #000000">
+                  21.4<br />(70.5)
+                </td>
+                <td style="background: #ffa449; color: #000000">
+                  17.7<br />(63.9)
+                </td>
+                <td style="background: #ffb76f; color: #000000">
+                  14.9<br />(58.8)
+                </td>
+                <td
+                  style="
+                    background: #ff9226;
+                    color: #000000;
+                    border-left-width: medium;
+                  "
+                >
+                  20.23<br />(68.41)
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <th scope="row" style="height: 16px">
+                  Lượng mưa trung bình mm (inches)
+                </th>
+                <td style="background: #edffed; color: #000000">
+                  12<br />(0.5)
+                </td>
+                <td style="background: #c9ffc9; color: #000000">
+                  33<br />(1.3)
+                </td>
+                <td style="background: #ccffcc; color: #000000">
+                  34<br />(1.3)
+                </td>
+                <td style="background: #79ff79; color: #000000">
+                  87<br />(3.4)
+                </td>
+                <td style="background: #00c300; color: #ffffff">
+                  211<br />(8.3)
+                </td>
+                <td style="background: #008400; color: #ffffff">
+                  245<br />(9.6)
+                </td>
+                <td style="background: #003000; color: #ffffff">
+                  332<br />(13.1)
+                </td>
+                <td style="background: #003000; color: #ffffff">
+                  337<br />(13.3)
+                </td>
+                <td style="background: #009500; color: #ffffff">
+                  234<br />(9.2)
+                </td>
+                <td style="background: #6cff6c; color: #000000">
+                  98<br />(3.9)
+                </td>
+                <td style="background: #caffca; color: #000000">
+                  34<br />(1.3)
+                </td>
+                <td style="background: #dcffdc; color: #000000">
+                  23<br />(0.9)
+                </td>
+                <td
+                  style="
+                    background: #2aff2a;
+                    color: #000000;
+                    border-left-width: medium;
+                  "
+                >
+                  1.680<br />(66.1)
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <th scope="row" style="height: 16px">Số ngày mưa trung bình</th>
+                <td style="background: #a8a8ff; color: #000000">7</td>
+                <td style="background: #a0a0ff; color: #000000">7</td>
+                <td style="background: #8383ff; color: #000000">10</td>
+                <td style="background: #8c8cff; color: #000000">9</td>
+                <td style="background: #5252ff; color: #ffffff">14</td>
+                <td style="background: #3f3fff; color: #ffffff">15</td>
+                <td style="background: #2d2dff; color: #ffffff">17</td>
+                <td style="background: #2020ff; color: #ffffff">18</td>
+                <td style="background: #5959ff; color: #ffffff">13</td>
+                <td style="background: #8f8fff; color: #000000">9</td>
+                <td style="background: #b2b2ff; color: #000000">6</td>
+                <td style="background: #c1c1ff; color: #000000">5</td>
+                <td
+                  style="
+                    background: #7676ff;
+                    color: #000000;
+                    border-left-width: medium;
+                  "
+                >
+                  130
+                </td>
+              </tr>
+              <tr style="text-align: center">
+                <th style="height: 16px">Độ ẩm tương đối trung bình (%)</th>
+                <td style="background: #0000ee; color: #ffffff">71</td>
+                <td style="background: #0000e2; color: #ffffff">74</td>
+                <td style="background: #0000d7; color: #ffffff">77</td>
+                <td style="background: #0000d3; color: #ffffff">78</td>
+                <td style="background: #0000cf; color: #ffffff">79</td>
+                <td style="background: #0000cb; color: #ffffff">80</td>
+                <td style="background: #0000c8; color: #ffffff">81</td>
+                <td style="background: #0000b8; color: #ffffff">85</td>
+                <td style="background: #0000c8; color: #ffffff">81</td>
+                <td style="background: #0000df; color: #ffffff">75</td>
+                <td style="background: #0000ea; color: #ffffff">72</td>
+                <td style="background: #0000f9; color: #ffffff">68</td>
+                <td
+                  style="
+                    background: #0000d7;
+                    color: #ffffff;
+                    border-left-width: medium;
+                  "
+                >
+                  77
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size: 15px">
+            (nguồn thông tin:
+            <a
+              href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
+              target="_blank"
+              >wiki Bắc Ninh</a
+            >)
+          </p>
+        </article>
+      </section>
+      <hr />
+      <section class="w3-row-padding w3-padding-16" id="THOITIET">
+        <h1 class="w3-padding-16" style="color: red; font-size: 50px">
+          DỰ BÁO THỜI TIẾT TRONG TỈNH
+        </h1>
+        <div
+          style="
+            max-width: 760px;
+            margin: 0 auto;
+            font-family: &quot;Montserrat&quot;, Arial, sans-serif;
+          "
+        >
+          <h2
+            class="section-title"
+            style="text-align: center; color: #0a3d2e; margin-bottom: 6px"
+          >
+            🌤 Dự Báo Thời Tiết
+          </h2>
+          <p
+            style="
+              text-align: center;
+              color: #666;
+              font-size: 14px;
+              margin-bottom: 20px;
+            "
+          >
+            Gõ tên xã / phường / thị trấn để xem dự báo thời tiết
+          </p>
+
+          <div
+            style="position: relative; max-width: 440px; margin: 0 auto 22px"
+          >
+            <span
+              style="
+                position: absolute;
+                left: 14px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 17px;
+                pointer-events: none;
+              "
+              >🔍</span
+            >
+            <input
+              type="text"
+              id="tt-input"
+              placeholder="Gõ tên xã, phường, thị trấn..."
+              oninput="ttFilter()"
+              onfocus="ttShow()"
+              autocomplete="off"
+              style="
+                width: 100%;
+                padding: 13px 14px 13px 42px;
+                font-size: 15px;
+                border-radius: 10px;
+                border: 2px solid #0a3d2e;
+                color: #333;
+                background: #fff;
+                font-family: inherit;
+                outline: none;
+                box-sizing: border-box;
+              "
+            />
+            <div
+              id="tt-drop"
+              style="
+                display: none;
+                position: absolute;
+                top: calc(100% + 4px);
+                left: 0;
+                right: 0;
+                background: #fff;
+                border: 2px solid #0a3d2e;
+                border-radius: 10px;
+                max-height: 250px;
+                overflow-y: auto;
+                z-index: 9999;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+              "
+            ></div>
+          </div>
+
+          <div
+            id="tt-box"
+            style="
+              display: none;
+              border-radius: 14px;
+              overflow: hidden;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            "
+          >
+            <div
+              style="
+                background: #0a3d2e;
+                color: #fff;
+                padding: 12px 20px;
+                font-size: 15px;
+                font-weight: 600;
+              "
+            >
+              📍 Thời tiết: <span id="tt-name"></span>
+            </div>
+            <div id="tt-widget-wrap" style="background: #fff"></div>
+            <div
+              id="tt-noembed"
+              style="
+                display: none;
+                padding: 24px;
+                text-align: center;
+                background: #fff;
+              "
+            >
+              <p style="color: #888; font-size: 14px">
+                ⚙️ Khu vực này chưa có dữ liệu.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var TT_AREAS = [
+            {
+              name: "Huyện Lương Tài",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/luong-tai?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Gia Bình",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/gia-binh?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Tiên Du",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/tien-du?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Yên Phong",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/yen-phong?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "thị xã Thuận Thành",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/thuan-thanh?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "thị xã Quế Võ",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/que-vo?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Thành phố Bắc Ninh",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/bac-ninh?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Thành phố Từ Sơn",
+              parent: "Tỉnh Bắc Ninh cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/tu-son?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+
+            {
+              name: "thị xã Việt Yên",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/viet-yen?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "thị xã  Chũ",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/luc-ngan/chu?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Thành phố Bắc Giang",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/bac-giang?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Lục Ngạn",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/luc-ngan?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Lục Nam",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/luc-nam?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Yên Thế",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/yen-the?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Lạng Giang",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/lang-giang?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Tân Yên",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/tan-yen?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Sơn Động",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/son-dong?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+            {
+              name: "Huyện Hiệp Hòa",
+              parent: "Tỉnh Bắc Giang cũ",
+              widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-giang/hiep-hoa?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
+            },
+          ];
+          function ttNorm(s) {
+            return s
+              .toLowerCase()
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "")
+              .replace(/đ/g, "d");
+          }
+
+          var ttFiltered = TT_AREAS.slice();
+
+          function ttFilter() {
+            var q = ttNorm(document.getElementById("tt-input").value.trim());
+            ttFiltered = q
+              ? TT_AREAS.filter(function (a) {
+                  return ttNorm(a.name).indexOf(q) !== -1;
+                })
+              : TT_AREAS.slice();
+            ttRender();
+            document.getElementById("tt-drop").style.display = "block";
+          }
+
+          function ttShow() {
+            ttFiltered = TT_AREAS.slice();
+            ttRender();
+            document.getElementById("tt-drop").style.display = "block";
+          }
+
+          function ttRender() {
+            var dd = document.getElementById("tt-drop");
+            if (!ttFiltered.length) {
+              dd.innerHTML =
+                '<div style="padding:14px 18px;color:#999;font-size:14px;">Không tìm thấy</div>';
+              return;
+            }
+            dd.innerHTML = ttFiltered
+              .map(function (a) {
+                var idx = TT_AREAS.indexOf(a);
+                var dot = a.widget.trim()
+                  ? '<span style="color:#27ae60;font-size:10px;margin-left:6px;" title="Đã có widget">●</span>'
+                  : '<span style="color:#ccc;font-size:10px;margin-left:6px;" title="Chưa có widget">●</span>';
+                return (
+                  '<div onclick="ttSelect(' +
+                  idx +
+                  ')"' +
+                  ' style="padding:11px 18px;font-size:14px;cursor:pointer;' +
+                  'border-bottom:1px solid #f5f5f5;display:flex;align-items:center;"' +
+                  " onmouseover=\"this.style.background='#f0f7f4'\"" +
+                  " onmouseout=\"this.style.background='#fff'\">" +
+                  '<span style="color:#0a3d2e;font-weight:600;">' +
+                  a.name +
+                  "</span>" +
+                  dot +
+                  "</div>"
+                );
+              })
+              .join("");
+          }
+
+          function ttSelect(idx) {
+            var a = TT_AREAS[idx];
+            document.getElementById("tt-input").value = a.name;
+            document.getElementById("tt-drop").style.display = "none";
+            var locationTitle = a.name;
+            if (a.parent) {
+              locationTitle += " (" + a.parent + ")";
+            }
+
+            document.getElementById("tt-name").textContent = locationTitle;
+            document.getElementById("tt-box").style.display = "block";
+
+            var wrap = document.getElementById("tt-widget-wrap");
+            var noEmbed = document.getElementById("tt-noembed");
+
+            if (a.widget && a.widget.trim()) {
+              wrap.innerHTML = a.widget;
+              wrap.style.display = "block";
+              noEmbed.style.display = "none";
+            } else {
+              wrap.innerHTML = "";
+              wrap.style.display = "none";
+              noEmbed.style.display = "block";
+            }
+
+            document
+              .getElementById("tt-box")
+              .scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+
+          document.addEventListener("click", function (e) {
+            var inp = document.getElementById("tt-input");
+            var drop = document.getElementById("tt-drop");
+            if (drop && e.target !== inp && !drop.contains(e.target))
+              drop.style.display = "none";
+          });
+        </script>
+      </section>
+      <hr />
+      <section class="w3-container w3-padding-16 table-responsive" id="contact">
+        <h1 style="font-size: 50px" class="w3-center">DÂN CƯ</h1>
+        <br />
+        <article>
+          <table style="width: 100%">
+            <tr>
+              <th>năm</th>
+              <th>số dân</th>
+              <th>±%</th>
+              <th>năm</th>
+              <th>số dân</th>
+              <th>±%</th>
+            </tr>
+            <tr>
+              <td>1999</td>
+              <td>1,200,000</td>
+              <td>—</td>
+              <td>2009</td>
+              <td>1,320,000</td>
+              <td>+10.0%</td>
+            </tr>
+            <tr>
+              <td>2000</td>
+              <td>1,210,000</td>
+              <td>+0.8%</td>
+              <td>2010</td>
+              <td>1,400,000</td>
+              <td>+10.0%</td>
+            </tr>
+            <tr>
+              <td>2001</td>
+              <td>1,220,000</td>
+              <td>+0.8%</td>
+              <td>2011</td>
+              <td>1,420,000</td>
+              <td>+1.4%</td>
+            </tr>
+            <tr>
+              <td>2002</td>
+              <td>1,230,000</td>
+              <td>+0.8%</td>
+              <td>2012</td>
+              <td>1,440,000</td>
+              <td>+1.4%</td>
+            </tr>
+            <tr>
+              <td>2003</td>
+              <td>1,250,000</td>
+              <td>+1.6%</td>
+              <td>2013</td>
+              <td>1,460,000</td>
+              <td>+1.4%</td>
+            </tr>
+            <tr>
+              <td>2004</td>
+              <td>1,270,000</td>
+              <td>+1.6%</td>
+              <td>2014</td>
+              <td>1,490,000</td>
+              <td>+2.1%</td>
+            </tr>
+            <tr>
+              <td>2005</td>
+              <td>1,280,000</td>
+              <td>+0.8%</td>
+              <td>2015</td>
+              <td>1,510,000</td>
+              <td>+1.3%</td>
+            </tr>
+            <tr>
+              <td>2006</td>
+              <td>1,290,000</td>
+              <td>+0.8%</td>
+              <td>2016</td>
+              <td>1,530,000</td>
+              <td>+1.3%</td>
+            </tr>
+            <tr>
+              <td>2007</td>
+              <td>1,300,000</td>
+              <td>+0.8%</td>
+              <td>2017</td>
+              <td>1,550,000</td>
+              <td>+1.3%</td>
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>1,310,000</td>
+              <td>+0.8%</td>
+              <td>2018</td>
+              <td>1,570,000</td>
+              <td>+1.3%</td>
+            </tr>
+          </table>
+          <p>
+            Theo dữ liệu Sáp nhập tỉnh, thành Việt Nam 2025 dân số Bắc Ning (Bắc
+            Ninh cũ + Bắc Giang) có dân số: 3.619.433 người, xếp thứ 14; GRDP
+            2024: 439.776.542 triệu VNĐ , xếp thứ 5; thu ngân sách 2024:
+            53.804.577 triệu VNĐ, xếp thứ 8; thu nhập bình quân: 65,10 triệu
+            VNĐ/năm, xếp thứ 8.
+          </p>
+          <p style="font-size: 15px">
+            (nguồn thông tin:
+            <a
+              href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
+              target="_blank"
+              >wiki Bắc Ninh</a
+            >)
+          </p>
+        </article>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16" id="VANHOA">
+        <h1 class="w3-center" style="font-size: 50px">VĂN HOÁ, LỄ HỘI</h1>
+        <article>
+          <p>
+            -Bắc Ninh là vùng đất Kinh Bắc giàu truyền thống văn hóa – lịch sử,
+            nổi bật với hệ thống di tích, lễ hội dân gian và làng nghề truyền
+            thống phong phú. Nơi đây có Văn miếu Bắc Ninh – văn miếu lớn thứ ba
+            cả nước, vinh danh 677 vị đại khoa, phản ánh truyền thống hiếu học
+            lâu đời gắn với trung tâm văn minh cổ Luy Lâu. Bắc Ninh cũng là cái
+            nôi của Phật giáo Việt Nam với các ngôi chùa nổi tiếng như Chùa Dâu,
+            Phật Tích, Bút Tháp. Vùng đất này còn nổi danh với dân ca Quan họ,
+            nhiều làng nghề truyền thống (tranh Đông Hồ, gốm Phù Lãng, gỗ Đồng
+            Kỵ, đúc đồng Đại Bái…) và nhiều di tích lịch sử quan trọng như đền
+            Đô, lăng Kinh Dương Vương, đình Đình Bảng. Ẩm thực Bắc Ninh mang đậm
+            bản sắc địa phương với bánh phu thê, nem Bùi, rượu nếp Cẩm, bánh tẻ,
+            bánh tro. Đến ngày 05/12/2015, Bắc Ninh có 3 di sản văn hóa được
+            UNESCO ghi danh tại Việt Nam:
+            <mark
+              ><b
+                >Dân ca Quan họ Bắc Ninh, Ca trù và Trò chơi kéo co truyền
+                thống.</b
+              ></mark
+            >
+          </p>
+          <details>
+            <summary
+              class="w3-bar-item w3-button w3-padding"
+              style="font-size: large"
+            >
+              <strong>-Các lễ hội tiêu biểu của tỉnh Bắc Ninh:</strong>
+            </summary>
+            <ol>
+              <li>
+                Lễ hội Kinh Dương Vương – Lạc Long Quân và Âu Cơ (16–18 tháng
+                Giêng, Thuận Thành)
+              </li>
+              <li>
+                Hội chùa Tổ – quê hương Huyền Quang (18–21 tháng 2 âm lịch, Gia
+                Bình)
+              </li>
+              <li>Lễ hội làng Đại Lâm (24–26 tháng Giêng, Yên Phong)</li>
+              <li>Lễ hội Lim (11–13 tháng Giêng, Tiên Du)</li>
+              <li>Lễ hội làng Tam Tảo (10 tháng 2 âm lịch, Tiên Du)</li>
+              <li>Lễ hội Đền Bà Chúa Kho (14 tháng Giêng, TP Bắc Ninh)</li>
+              <li>Lễ hội chùa Phật Tích (mùng 3–5 Tết, Tiên Du)</li>
+              <li>Lễ hội làng Kim Chân – làng Tiến sĩ (26–28 tháng 2)</li>
+              <li>
+                Lễ hội Đền Đô – tưởng niệm các vua nhà Lý (15 tháng 3 âm lịch,
+                Từ Sơn)
+              </li>
+              <li>Lễ hội chùa Bút Tháp (22–24 tháng 3 âm lịch, Thuận Thành)</li>
+              <li>Lễ hội Thập Đình (5–7 tháng 2 âm lịch, Gia Bình – Quế Võ)</li>
+              <li>Lễ hội Cao Lỗ Vương (10 tháng 3 âm lịch, Gia Bình)</li>
+              <li>Lễ hội Đồng Kỵ (mùng 4 tháng Giêng, Từ Sơn)</li>
+              <li>
+                Lễ hội Khám – chùa Linh Ứng (7 tháng 4 âm lịch, Thuận Thành)
+              </li>
+              <li>Lễ hội chùa Dâu (8 tháng 4 âm lịch, Thuận Thành)</li>
+              <li>
+                Lễ hội làng Diềm – hội Gióng (5–7 tháng 2 âm lịch, TP Bắc Ninh)
+              </li>
+              <li>Lễ hội kéo co Hữu Chấp (mùng 4 tháng Giêng, TP Bắc Ninh)</li>
+              <li>Lễ hội chùa Thượng Phúc (10 tháng 2 âm lịch, Quế Võ)</li>
+              <li>Lễ hội Xương Giang (6–7 tháng Giêng)</li>
+              <li>Lễ hội Yên Thế (16 tháng 3 dương lịch)</li>
+              <li>Lễ hội Tiên Lục (9 tháng Giêng – năm nhuận)</li>
+              <li>Lễ hội đền Từ Hả (7–8 tháng Giêng)</li>
+              <li>Lễ hội Cầu Vồng (15–17 tháng Giêng)</li>
+              <li>Lễ hội Thổ Hà (21–22 tháng Giêng)</li>
+              <li>Lễ hội chùa Vĩnh Nghiêm (13–15 tháng 2 âm lịch)</li>
+              <li>Lễ hội Bổ Đà (17–18 tháng 2 âm lịch)</li>
+              <li>Lễ hội đình Dĩnh Thép (6 tháng 3 âm lịch)</li>
+              <li>Lễ hội Suối Mỡ (30/3 – 1/4 âm lịch)</li>
+            </ol>
+          </details>
+          <p style="font-size: 15px">
+            (nguồn thông tin:
+            <a
+              href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
+              target="_blank"
+              >wiki Bắc Ninh</a
+            >)
+          </p>
+        </article>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16" id="DITICH">
+        <h1 class="w3-center" style="font-size: 50px">
+          DI TÍCH, DI SẢN VĂN HOÁ
+        </h1>
+        <article>
+          <p>
+            -Di sản văn hóa phi vật thể tiêu biểu nhất ở Bắc Ninh là dân ca Quan
+            họ Bắc Ninh đã được Tổ chức Giáo dục, Khoa học và Văn hóa Liên Hợp
+            Quốc xếp vào Kiệt tác truyền khẩu và phi vật thể nhân loại. <br />
+            -Bắc Ninh có khoảng 1600 di tích lịch sử văn hoá, trong đó có 651 di
+            tích được xếp hạng (trong đó có 204 di tích xếp hạng cấp Quốc gia, 4
+            di tích Quốc gia đặc biệt, 443 di tích xếp hạng cấp tỉnh), 17 bảo
+            vật quốc gia.Là tỉnh có nhiều di tích cấp quốc gia chỉ sau thành phố
+            Hà Nội. Diễn ra vào đầu xuân, là dịp để người dân tỉnh Bắc Ninh
+            tưởng nhớ và tri ân tổ tiên.
+          </p>
+          <details>
+            <summary
+              class="w3-bar-item w3-button w3-padding"
+              style="font-size: large"
+            >
+              -Một số di tích lịch sử:
+            </summary>
+            <ol
+              style="
+                list-style-type: decimal;
+                line-height: 1.8;
+                font-family: Arial, sans-serif;
+              "
+            >
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Bút Tháp</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/H1DQAM763MiWPbAK7"
+                  target="_blank"
+                  >Phường Trí Quả</a
+                ><br />
+                - Loại di tích: Di tích kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ch%C3%B9a_B%C3%BAt_Th%C3%A1p.jpg/330px-Ch%C3%B9a_B%C3%BAt_Th%C3%A1p.jpg"
+                    alt="Chùa Bút Tháp"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Dâu</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/mcTJtqor7eTXdFy79"
+                  target="_blank"
+                  >Phường Trí Quả</a
+                ><br />
+                - Loại di tích: Di tích kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Dau_pagoda.jpg/330px-Dau_pagoda.jpg"
+                    alt="Chùa Dâu"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Khu lăng mộ và đền thờ các vị vua triều Lý</strong
+                ><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/i3GTw4rAN2UcAeEz5"
+                  target="_blank"
+                  >Phường Từ Sơn</a
+                ><br />
+                - Loại di tích: Di tích lịch sử<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/%C4%90%E1%BB%81n_%C4%90%C3%B4_-_14061132515.jpg/330px-%C4%90%E1%BB%81n_%C4%90%C3%B4_-_14061132515.jpg"
+                    alt="Đền Đô"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Phật Tích</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/i3GTw4rAN2UcAeEz5"
+                  target="_blank"
+                  >Xã Phật Tích</a
+                ><br />
+                - Loại di tích: Di tích lịch sử, kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/ChuyetChuyet_mummy.jpg/330px-ChuyetChuyet_mummy.jpg"
+                    alt="Chùa Phật Tích"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Vĩnh Nghiêm</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/gpmvLADEnwe6aW1o9"
+                  target="_blank"
+                  >Phường Tân An</a
+                ><br />
+                - Loại di tích: Di tích lịch sử, kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Ch%C3%B9a_V%C4%A9nh_Nghi%C3%AAm_-_Y%C3%AAn_D%C5%A9ng_-_B%E1%BA%AFc_Giang_-_panoramio_%2824%29.jpg/330px-Ch%C3%B9a_V%C4%A9nh_Nghi%C3%AAm_-_Y%C3%AAn_D%C5%A9ng_-_B%E1%BA%AFc_Giang_-_panoramio_%2824%29.jpg"
+                    alt="Chùa Vĩnh Nghiêm"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Đình Đình Bảng</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/VT7XnwmZyuLzmvf7A"
+                  target="_blank"
+                  >Phường Từ Sơn</a
+                ><br />
+                - Loại di tích: Di tích kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/%C4%90%C3%ACnh_B%E1%BA%A3ng_communal_house.JPG/330px-%C4%90%C3%ACnh_B%E1%BA%A3ng_communal_house.JPG"
+                    alt="Đình Đình Bảng"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Đình Thổ Hà</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/u4sVRxAzuApQpHj48"
+                  target="_blank"
+                  >Phường Vân Hà</a
+                ><br />
+                - Loại di tích: Di tích kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/ThoHa_Dinh1.JPG/330px-ThoHa_Dinh1.JPG"
+                    alt="Đình Thổ Hà"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Lăng Dinh Hương</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/fVzDUWX4EVEuixki9"
+                  target="_blank"
+                  >Xã Hiệp Hòa</a
+                ><br />
+                - Loại di tích: Di tích lịch sử<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/LangDinhHuong2.JPG/330px-LangDinhHuong2.JPG"
+                    alt="Lăng Dinh Hương"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 330px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Lăng Họ Ngọ</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/kmKrKefVPMWN6Jpz8"
+                  target="_blank"
+                  >Xã Hợp Thịnh</a
+                ><br />
+                - Loại di tích: Di tích lịch sử<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/LHN_Mo.JPG/250px-LHN_Mo.JPG"
+                    alt="Lăng Họ Ngọ"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Hàm Long</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/ESxcafFufEJtR2ZeA"
+                  target="_blank"
+                  >Phường Nam Sơn</a
+                ><br />
+                - Loại di tích: Di tích lịch sử - văn hóa<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/C%E1%BB%95ng_ch%C3%B9a_H%C3%A0m_Long.jpg/250px-C%E1%BB%95ng_ch%C3%B9a_H%C3%A0m_Long.jpg"
+                    alt="Chùa Hàm Long"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Tiêu</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/txibR8rwJn47Gisn9"
+                  target="_blank"
+                  >Phường Tam Sơn</a
+                ><br />
+                - Loại di tích: Di tích lịch sử, nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Quang_c%E1%BA%A3nh_ch%C3%B9a_Ti%C3%AAu.jpg/250px-Quang_c%E1%BA%A3nh_ch%C3%B9a_Ti%C3%AAu.jpg"
+                    alt="Chùa Tiêu"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Đình Quảng Bố</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/c9oGYmAjiBjFVWVJ7"
+                  target="_blank"
+                  >Xã Đông Cứu</a
+                ><br />
+                - Loại di tích: Di tích lịch sử - văn hóa<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Trong_s%C3%A2n_%C4%91%C3%ACnh_l%C3%A0ng_Qu%E1%BA%A3ng_B%E1%BB%91%2C_th%C3%B4n_Qu%E1%BA%A3ng_B%E1%BB%91%2C_x%C3%A3_Qu%E1%BA%A3ng_Ph%C3%BA%2C_huy%E1%BB%87n_L%C6%B0%C6%A1ng_T%C3%A0i%2C_t%E1%BB%89nh_B%E1%BA%AFc_Ninh.jpg/250px-Trong_s%C3%A2n_%C4%91%C3%ACnh_l%C3%A0ng_Qu%E1%BA%A3ng_B%E1%BB%91%2C_th%C3%B4n_Qu%E1%BA%A3ng_B%E1%BB%91%2C_x%C3%A3_Qu%E1%BA%A3ng_Ph%C3%BA%2C_huy%E1%BB%87n_L%C6%B0%C6%A1ng_T%C3%A0i%2C_t%E1%BB%89nh_B%E1%BA%AFc_Ninh.jpg"
+                    alt="Đình Quảng Bố"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Đền thờ Lê Văn Thịnh</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/DT1J3ZpVXVBcijg27"
+                  target="_blank"
+                  >Phường Trí Quả</a
+                ><br />
+                - Loại di tích: Di tích kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Le_Van_Thinh.JPG/250px-Le_Van_Thinh.JPG"
+                    alt="Đền thờ Lê Văn Thịnh"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Thổ Hà</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/ifsFAhU7KPYgsT91A"
+                  target="_blank"
+                  >Phường Vân Hà</a
+                ><br />
+                - Loại di tích: Di tích kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/ThoHa_Chua1.JPG/250px-ThoHa_Chua1.JPG"
+                    alt="Chùa Thổ Hà"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Đình Ngọc Trì</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/NkHuPCZ6R9RcxVfs6"
+                  target="_blank"
+                  >Xã Lâm Thao</a
+                ><br />
+                - Loại di tích: Di tích kiến trúc nghệ thuật<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/%C4%90%C3%ACnh_th%C3%B4n_Ng%E1%BB%8Dc_Tr%C3%AC%2C_t%E1%BA%A1i_x%C3%A3_B%C3%ACnh_%C4%90%E1%BB%8Bnh%2C_huy%E1%BB%87n_L%C6%B0%C6%A1ng_T%C3%A0i%2C_t%E1%BB%89nh_B%E1%BA%AFc_Ninh.jpg/250px-%C4%90%C3%ACnh_th%C3%B4n_Ng%E1%BB%8Dc_Tr%C3%AC%2C_t%E1%BA%A1i_x%C3%A3_B%C3%ACnh_%C4%90%E1%BB%8Bnh%2C_huy%E1%BB%87n_L%C6%B0%C6%A1ng_T%C3%A0i%2C_t%E1%BB%89nh_B%E1%BA%AFc_Ninh.jpg"
+                    alt="Đình Ngọc Trì"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Chùa Lim (chùa Hồng Ân)</strong><br />
+                - Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/9YViibiUXZrRrRBG9"
+                  target="_blank"
+                  >Xã Tiên Du</a
+                ><br />
+                - Loại di tích: Di tích lịch sử - văn hóa<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ch%C3%B9a_Lim%2C_B%E1%BA%AFc_Ninh.JPG/250px-Ch%C3%B9a_Lim%2C_B%E1%BA%AFc_Ninh.JPG"
+                    alt="Chùa Lim"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+            </ol>
+          </details>
+
+          <details>
+            <summary
+              class="w3-bar-item w3-button w3-padding"
+              style="font-size: large"
+            >
+              -Một số di tích lịch sử khác (chưa tìm đc hình ảnh hoặc địa chỉ cụ
+              thể)
+            </summary>
+            <ol>
+              <li>
+                Đình Quan Đình <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/nrg4A1brDCEveZk37"
+                  target="_blank"
+                  >Xã Văn Môn</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Di tích khảo cổ chùa Lái <br />-Địa điểm: Phường Võ Cường
+                <br />-Loại di tích: Di tích khảo cổ
+              </li>
+              <li>
+                Nhà thờ 18 tiến sĩ họ Nguyễn <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/DF4ozAnnVzFhSmWEA"
+                  target="_blank"
+                  >Phường Kim Chân</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đình Cẩm Giang <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/8uxmtE8ixebosigg9"
+                  target="_blank"
+                  >Phường Đồng Nguyên</a
+                >
+                <br />-Loại di tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Đền thờ Đàm Đình Cư <br />-Địa điểm: Phường Phù Khê <br />-Loại
+                di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đình Mai Động <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/zJj62iLPToXuAuJa7"
+                  target="_blank"
+                  >Phường Phù Khê</a
+                >
+                <br />-Loại di tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Đình Hồi Quan <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/4o2HCUxdchnLqRhp7"
+                  target="_blank"
+                  >Phường Tam Sơn</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đền và Chùa Ngô Xá <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/z9e9AWyFmA3DgfPt5"
+                  target="_blank"
+                  >Xã Yên Phong</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Chùa Phả Lại <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/A5W7yb8RDrcpdg666"
+                  target="_blank"
+                  >Xã Phù Lãng</a
+                >
+                <br />-Loại di tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Đình, Chùa Vân Cốc <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/Y2Q87jb9FcDRYE5T9"
+                  target="_blank"
+                  >Phường Nếnh</a
+                >
+                <br />-Loại di tích: Di tích lịch sử, kiến trúc nghệ thuật
+              </li>
+              <li>
+                Núi Đồn <br />-Địa điểm: Phường Nếnh <br />-Loại di tích: Di
+                tích lịch sử
+              </li>
+              <li>
+                Đền, Đình Trịnh Nguyễn <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/6kHmnLs2zMnqQ9tr6"
+                  target="_blank"
+                  >Phường Phù Khê</a
+                >
+                <br />-Loại di tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Đình Tiến Bào <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/MWG1QRrNWeHiTfNv5"
+                  target="_blank"
+                  >Phường Phù Khê</a
+                >
+                <br />-Loại di tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Đình Mẫn Xá <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/xAryJjg83yMFHFaQ8"
+                  target="_blank"
+                  >Xã Văn Môn</a
+                ><br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đình Đông Mai <br />-Địa điểm: Xã Yên Phong <br />-Loại di tích:
+                Di tích lịch sử, kiến trúc nghệ thuật
+              </li>
+              <li>
+                Đền Liễu Giáp <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/ksHPouh2dsWX1RCT8"
+                  target="_blank"
+                  >Xã Tiên Du</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Mộ và nhà thờ Nguyễn Đương Hồ <br />-Địa điểm: Xã Đại Đồng
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đình thôn Lương <br />-Địa điểm: Xã Đại Đồng <br />-Loại di
+                tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Đình Tiểu Than và Mộ Cao Lỗ <br />-Địa điểm: Xã Cao Đức
+                <br />-Loại di tích: Di tích lịch sử, kiến trúc nghệ thuật
+              </li>
+              <li>
+                Chùa Đại Bi <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/wfWkudGkmvFHihLR7"
+                  target="_blank"
+                  >Xã Nhân Thắng</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đền, Chùa Vân <br />-Địa điểm: Phường Vân Hà <br />-Loại di
+                tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Lăng Họ Trần <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/BrLsMF2Bv5UiHD4t5"
+                  target="_blank"
+                  >Xã Hợp Thịnh</a
+                >
+                <br />-Loại di tích: Di tích kiến trúc nghệ thuật
+              </li>
+              <li>
+                Mộ và Đền thờ Phạm Văn Liêu <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/pwitpLnGzEAPMZ687"
+                  target="_blank"
+                  >Xã Mỹ Thái</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đền, Chùa Điều Sơn <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/Zg3AbaLK48fmT4hR8"
+                  target="_blank"
+                  >Phường Kinh Bắc</a
+                >
+                <br />-Loại di tích: Di tích lịch sử
+              </li>
+              <li>
+                Đình, Chùa làng Yên Mẫn <br />-Địa điểm:
+                <a
+                  href="https://maps.app.goo.gl/e68Ltk716Tmdf1dM6"
+                  target="_blank"
+                  >Phường Kinh Bắc</a
+                >
+                <br />-Loại di tích: Di tích lịch sử, kiến trúc nghệ thuật
+              </li>
+            </ol>
+            <p>
+              (nguồn thông tin:
+              <a
+                href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                target="_blank"
+                >wiki di tích Bắc Ninh</a
+              >
+              )
+            </p>
+          </details>
+
+          <details>
+            <summary
+              class="w3-bar-item w3-button w3-padding"
+              style="font-size: large"
+            >
+              -Ngoài ra còn có các di sản văn hoá phi vật thể như:
+            </summary>
+            <ol
+              style="
+                list-style-type: decimal;
+                line-height: 1.8;
+                font-family: Arial, sans-serif;
+              "
+            >
+              <li style="margin-bottom: 25px">
+                <strong>Dân ca Quan họ Bắc Ninh</strong> (Di sản văn hóa phi vật
+                thể đại diện của nhân loại)<br />
+                - Loại hình: Nghệ thuật trình diễn dân gian<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Quan_Ho-Ensemble.JPG/250px-Quan_Ho-Ensemble.JPG"
+                    class="w3-container"
+                    alt="Dân ca Quan họ"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Ca trù</strong> (Di sản văn hóa phi vật thể cần được bảo
+                tồn khẩn cấp)<br />
+                - Loại hình: Nghệ thuật trình diễn dân gian<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ca_tr%C3%B9.jpg/250px-Ca_tr%C3%B9.jpg"
+                    class="w3-container"
+                    alt="Ca trù"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Dân ca Cao Lan</strong><br />
+                - Loại hình: Nghệ thuật trình diễn dân gian<br />
+                <em>(Dữ liệu hình ảnh đang cập nhật)</em><br />
+                <small
+                  >(Nguồn:
+                  <a
+                    href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                    target="_blank"
+                    >Wikipedia Bắc Ninh</a
+                  >)</small
+                >
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Tranh dân gian Đông Hồ</strong><br />
+                - Loại hình: Nghề thủ công truyền thống<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/%C4%90%C3%A1m_c%C6%B0%E1%BB%9Bi_chu%E1%BB%99t.JPG/250px-%C4%90%C3%A1m_c%C6%B0%E1%BB%9Bi_chu%E1%BB%99t.JPG"
+                    class="w3-container"
+                    alt="Tranh Đông Hồ"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+
+              <li style="margin-bottom: 25px">
+                <strong>Nghề gốm Phù Lãng</strong><br />
+                - Loại hình: Nghề thủ công truyền thống<br />
+                <figure>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/G%E1%BB%91m_Ph%C3%B9_L%C3%A3ng.jpg/250px-G%E1%BB%91m_Ph%C3%B9_L%C3%A3ng.jpg"
+                    class="w3-container"
+                    alt="Gốm Phù Lãng"
+                    style="
+                      display: block;
+                      margin: 10px 0;
+                      border-radius: 5px;
+                      max-width: 250px;
+                    "
+                  />
+                  <figcaption>
+                    <small
+                      >(Nguồn:
+                      <a
+                        href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
+                        target="_blank"
+                        >Wikipedia Bắc Ninh</a
+                      >)</small
+                    >
+                  </figcaption>
+                </figure>
+              </li>
+            </ol>
+          </details>
+        </article>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16" id="GIAODUC">
+        <h1 class="w3-center" style="font-size: 50px">GIÁO DỤC</h1>
+        <article>
+          <p>
+            -Trong lịch sử, Bắc Ninh là tỉnh có nhiều Trạng nguyên nhất Việt
+            Nam. Khoa thi đầu tiên là khoa Minh kinh bác học, và khoa thi Nho
+            học với tên gọi Trạng nguyên chính thống lần đầu thì người khai khoa
+            đều là người Bắc Ninh. Trong những kỳ thi Đình dưới các triều đại
+            phong kiến, cả nước chọn được 47 Trạng nguyên và 2991 Tiến sĩ thì
+            riêng Kinh Bắc đã có tới 17 Trạng nguyên và 622 Tiến sĩ <br />
+            -Có những vị vừa là Thủ khoa Nho học vừa là Tể tướng như Nguyễn Đăng
+            Đạo (Trạng nguyên - Tham tụng), Vũ Miên (Hội nguyên - Tham tụng,
+            Quốc tử giám Tế tửu, Quốc sử quán Tổng tài). Có những dòng họ lưu
+            giữ được truyền thống nhiều đời: dòng họ Vũ làng Lương Xá (Vũ Kính,
+            Vũ Giới...), họ Vũ làng Xuân Lan (Vũ Miên) <br />
+            -Các Trạng nguyên người Bắc Ninh bao gồm: <br />
+          </p>
+          <ul style="font-size: larger">
+            <li>
+              Thủ khoa Minh kinh bác học Lê Văn Thịnh (1075) - Người đứng đầu
+              khoa thi đầu tiên trong lịch sử phong kiến Việt Nam khi chưa có
+              danh hiệu Trạng nguyên.
+              <figure>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Le_Van_Thinh.JPG/960px-Le_Van_Thinh.JPG"
+                  class="w3-container"
+                  style="width: 40%"
+                  alt="Lê Văn Thịnh"
+                />
+                <figcaption style="font-size: smaller">
+                  (nguồn thông tin và hình ảnh:
+                  <a
+                    href="https://vi.wikipedia.org/wiki/Th%E1%BB%A7_khoa_Nho_h%E1%BB%8Dc_Vi%E1%BB%87t_Nam"
+                    target="_blank"
+                    >wikipedia</a
+                  >
+                  )
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              Lý Đạo Tái (1272) - Tổ thứ ba (Huyền Quang) của thiền phái Trúc
+              Lâm Yên Tử
+              <figure>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Huyen_Quang_-_tam_t%E1%BB%95.jpg/960px-Huyen_Quang_-_tam_t%E1%BB%95.jpg"
+                  class="w3-container"
+                  style="width: 30%"
+                  alt="Huyền Quang"
+                />
+                <figcaption style="font-size: smaller">
+                  (nguồn thông tin và hình ảnh:
+                  <a
+                    href="https://vi.wikipedia.org/wiki/Huy%E1%BB%81n_Quang"
+                    target="_blank"
+                    >wikipedia</a
+                  >
+                  )
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+          <p>Ngoài ra còn 1 số trạng nguyên chưa rõ thông tin như:</p>
+          <ul style="font-size: larger">
+            <li>Lưu Thúc Kiệm (1400)</li>
+            <li>
+              Nguyễn Quan Quang - Trạng nguyên đầu tiên (bắt đầu gọi là Trạng
+              nguyên) (1234) - Tam Sơn
+            </li>
+            <li>
+              Nguyễn Nghiêu Tư (1448) - Trạng Lợn, Lưỡng quốc Trạng nguyên
+            </li>
+            <li>Vũ Kiệt (1472)</li>
+            <li>Nguyễn Quang Bật (1484)</li>
+            <li>Nghiêm Hoản (1496)</li>
+            <li>Nguyễn Giản Thanh (1508) - Trạng Me</li>
+            <li>Ngô Miễn Thiệu (1518) - Trạng nguyên - Tam Sơn</li>
+            <li>Hoàng Văn Tán (1523)</li>
+            <li>Nguyễn Lượng Thái (1553)</li>
+            <li>Phạm Quang Tiến (1565)</li>
+            <li>Vũ Giới (1577)</li>
+            <li>Nguyễn Xuân Chính (1637)</li>
+            <li>Nguyễn Đăng Đạo (1683) - Trạng Bịu, Lưỡng quốc Trạng nguyên</li>
+            <li>Trạng nguyên Giáp Hải</li>
+            <li>Đệ nhất giáp khoa xuất thân Nguyễn Viết Chất</li>
+            <li>Đình nguyên khoa Nguyễn Đình Tuân (Đinh Mão 1867 - 1941)</li>
+            <li>Thám hoa Quách Nhẫn (1251 - 1258)</li>
+          </ul>
+          <p>
+            -Sự nghiệp giáo dục - đào tạo phát triển toàn diện theo hướng bền
+            vững. Công tác phổ cập giáo dục ở các cấp học tiếp tục được quan tâm
+            và công nhận hoàn thành phổ cập giáo dục – xóa mù chữ các cấp học ở
+            mức độ cao nhất cả nước. Cơ sở vật chất, trang thiết bị dạy học được
+            đầu tư có trọng tâm, trọng điểm, đồng bộ, hiện đại.
+            <br />
+            -Tỉnh Bắc Ninh đã và đang quy hoạch 3 làng Đại học:
+          </p>
+          <ul>
+            <li>
+              Làng Đại học I có diện tích khoảng 200 ha tại Võ Cường (TP. Bắc
+              Ninh) và xã Liên Bão (Tiên Du).
+            </li>
+            <li>
+              Làng Đại học II quy hoạch theo hướng "Công viên các trường Đại
+              học" với diện tích tổng thể khoảng 1.300 ha tại các phường Hạp
+              Lĩnh (TP. Bắc Ninh), xã Lạc Vệ, Việt Đoàn, Minh Đạo, Tân Chi (Tiên
+              Du).
+            </li>
+            <li>
+              Làng Đại học III hiện tỉnh Bắc Ninh đang xúc tiến quy hoạch và lập
+              dự án đầu tư quy mô 1000 ha
+            </li>
+          </ul>
+          <p style="font-size: 15px" class="w3-center">
+            (nguồn thông tin:
+            <a
+              href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh#Du_l%E1%BB%8Bch"
+              target="_blank"
+              >wikipedia</a
+            >
+            )
+          </p>
+        </article>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16" id="KINHTE">
+        <h1 class="w3-center" style="font-size: 50px">KINH TẾ</h1>
+        <article>
+          <h2 style="text-align: left">TÓM TẮT PHÁT TRIỂN KINH TẾ BẮC NINH</h2>
+          <p>
+            1. Giai đoạn tái lập tỉnh (1997) <br />
+            -Cơ cấu kinh tế: Nông nghiệp 45,1%, Dịch vụ 31,1%, Công nghiệp – xây
+            dựng 23,8%. <br />
+            -Thu ngân sách: 164 tỷ đồng; GDP bình quân đầu người: 144 USD/năm.
+            <br />
+            -FDI: 4 dự án, tổng vốn 117 triệu USD. <br />
+            -Công nghiệp nhỏ, hạ tầng còn yếu; giá trị sản xuất công nghiệp: 569
+            tỷ đồng. <br />
+            ➡️ Sau 1997 kinh tế bắt đầu tăng trưởng mạnh. <br />
+            2. Giai đoạn 2006–2010 <br />
+            -Tăng trưởng GDP trung bình 15,3%/năm. <br />
+            -Năm 2010 đạt 17,86%, mức cao nhất lịch sử tỉnh. <br />
+            3. Kinh tế năm 2020 <br />
+            -GRDP (giá so sánh 2010): 124.975 tỷ đồng, tăng 3,31%. <br />
+            -GRDP (giá hiện hành): 209.227 tỷ đồng, tăng 4,58%. <br />
+            -Công nghiệp tăng 5,0%, đóng góp chủ lực vào tăng trưởng. <br />
+            -Một số ngành dịch vụ tăng tốt: <br />
+          </p>
+          <ul>
+            <li>Tài chính – ngân hàng +8,3%</li>
+            <li>Bán buôn bán lẻ +2,8%</li>
+            <li>BĐS +3,9%</li>
+            <li>Giáo dục – đào tạo +40%</li>
+          </ul>
+          <p>
+            -Thu NSNN: 30.731 tỷ đồng (+1,1%); trong đó thu nội địa chiếm 79,3%,
+            hải quan 20,7%. <br />
+            -Chi ngân sách: 24.053 tỷ đồng (giảm 13%), nhưng chi đầu tư tăng
+            mạnh 24,3%. <br />
+            -Dư nợ tín dụng: 101.094 tỷ đồng (+12,9%). <br />
+            4. Kinh tế năm 2021 <br />
+            -Quy mô GRDP: 227.615 tỷ đồng. <br />
+            -Tăng trưởng GRDP:
+          </p>
+          <ul>
+            <li>Giá hiện hành: 8,8%</li>
+            <li>Giá so sánh 2010: 6,9%</li>
+          </ul>
+          <p>
+            -GRDP bình quân đầu người: 6.738 USD. <br />
+            -Thu nhập bình quân đầu người: 71,8 triệu đồng. <br />
+            -Thu ngân sách: 33.052 tỷ đồng (thu nội địa 25.327 tỷ). <br />
+            -Dân số: 1.462.945 người; đô thị hóa 38%. <br />
+            -Xuất nhập khẩu:
+          </p>
+          <ul>
+            <li>Xuất khẩu: 46,408 tỷ USD</li>
+            <li>Nhập khẩu: 41,260 tỷ USD</li>
+          </ul>
+          <p>
+            -Vốn huy động: 196.200 tỷ đồng; tổng bán lẻ: 61.903 tỷ đồng. <br />
+            -Doanh nghiệp mới: 2.344 DN, vốn 28.622 tỷ đồng. <br />
+            -Thu hút FDI năm 2021: 1,663 tỷ USD; lũy kế đạt 21,243 tỷ USD.
+            <br />
+            -Đầu tư trong nước: 27.543 tỷ đồng. <br />
+            -Tổng vốn đầu tư phát triển: 58,2 nghìn tỷ đồng. <br />
+            -Nông thôn mới: 100% huyện đạt chuẩn. <br />
+            -Tỷ lệ hộ nghèo: 0,85%. <br />
+          </p>
+        </article>
+
+        <h2 style="text-align: center">Biểu đồ GRDP Bắc Ninh 1997–2024</h2>
+        <p style="text-align: center">Đơn vị: nghìn tỷ đồng (giá hiện hành)</p>
+        <figure style="width: 80%; margin: auto" class="chart-container">
+          <canvas id="grdpChart"></canvas>
+          <figcaption>
+            <p style="margin-top: 30px">
+              -Sau sáp nhập Bắc Ninh và Bắc Giang, tỉnh Bắc Ninh (mới) sẽ có quy
+              mô kinh tế là 439,8 nghìn tỉ đồng, đứng thứ 5 cả nước, sau các địa
+              phương: TP HCM, Hà Nội, Hải Phòng và Đồng Nai.
+            </p>
+            <p style="font-size: 15px" class="w3-center">
+              (nguồn thông tin:
+              <a
+                href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
+                target="_blank"
+                >wiki Bắc Ninh</a
+              >
+              |
+              <a
+                href="https://laodong.vn/thoi-su/bac-ninh-sau-sap-nhap-co-vi-the-lon-kinh-te-dung-thu-5-ca-nuoc-1494004.ldo"
+                target="_blank"
+                >laodong.vn</a
+              >
+              )
+            </p>
+          </figcaption>
+        </figure>
+
+        <script>
+          const ctx = document.getElementById("grdpChart");
+          new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: ["1997", "2020", "2021", "2023", "2024"],
+              datasets: [
+                {
+                  label: "GRDP (nghìn tỷ đồng)",
+                  data: [2.02, 209.227, 227.615, 220.2, 232.8],
+                  backgroundColor: "#4CAF50",
+                },
+                {
+                  label: "Tăng trưởng GRDP (%)",
+                  data: [null, 3.31, 6.9, -9.28, 6.03], // điền các % tăng trưởng theo từng năm
+                  backgroundColor: "#FF5722",
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  title: {
+                    display: true,
+                    text: "Giá trị / Tỷ lệ",
+                  },
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: "Năm",
+                  },
+                },
+              },
+            },
+          });
+        </script>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16" id="AMTHUC">
+        <h1 class="w3-center" style="font-size: 50px">ẨM THỰC</h1>
+        <h2>-Bắc Ninh có rất nhiều đặc sản nổi tiếng có thể kể đến như:</h2>
+        <ol>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Bánh tẻ làng Chờ
+              </summary>
+              <article>
+                <p>
+                  -Bánh tẻ làng Chờ được gói trong lá dong, tạo nên một hương
+                  thơm tự nhiên đặc trưng. Sự kết hợp hoàn hảo giữa vỏ bánh làm
+                  từ nếp mềm mịn và nhân đỗ xanh bùi bùi tạo nên một món ăn đậm
+                  đà, dễ gây nghiện. <br />
+                  -Giá tham khảo: 50.000 - 60.000 VND/chục <br />
+                  -Địa chỉ thưởng thức:
+                  <a
+                    href="https://maps.app.goo.gl/X61aTdxaDco1nTHe7"
+                    target="_blank"
+                    >198 phố mới, TT. Chờ, Yên Phong, Bắc Ninh 16250, Việt
+                    Nam</a
+                  ><br />
+                </p>
+                <figure>
+                  <img
+                    src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Thay%20Anh%20Traffic%20Tieng%20Viet/dac%20san%20bac%20ninh/mon-banh-nay-rat-thich-hop-lam-mon-an-nhe-trong-ngay-le-hay-cac-dip-dac-biet"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Bánh tẻ làng Chờ"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Bò tơ hấp cuốn bánh tráng
+              </summary>
+              <article>
+                <p>
+                  -Bò tơ hấp cuốn bánh tráng là món ăn hấp dẫn với thịt bò tơ
+                  được hấp chín tới, giữ nguyên độ ngọt tự nhiên và không bị
+                  dai, mang đến sự hài hòa với bánh tráng và rau sống tươi mát.
+                  Thực khách sẽ cuốn các nguyên liệu với nhau và chấm với nước
+                  mắm pha đặc biệt, tạo nên một hương vị khó quên. <br />
+                  -Giá tham khảo: 140.000 - 180.000 VND/phần <br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://maps.app.goo.gl/q6NKU3PUpc3WdcCN7"
+                    target="_blank"
+                    >Nhà hàng bò tơ A Bản - 29 Lê Thái Tổ, Võ Cường, Bắc Ninh</a
+                  >
+                  <br />
+                </p>
+                <figure>
+                  <img
+                    src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Thay%20Anh%20Traffic%20Tieng%20Viet/dac%20san%20bac%20ninh/thuc-khach-co-the-cham-cuon-bo-cung-mam-nem-hoac-nuoc-mam-chua-ngot"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Bò tơ hấp cuốn bánh tráng"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Cháo cá Tích Nghi
+              </summary>
+              <article>
+                <p>
+                  -Cá được lựa chọn trong món cháo đặc trưng này là cá rô đồng
+                  tươi ngon, được làm sạch và nấu cùng gạo nếp, thêm chút gia vị
+                  đậm đà. Tất cả mang đến món cháo bổ dưỡng có hương vị thanh
+                  mát, ngọt tự nhiên từ cá, kèm theo sự mềm dẻo của gạo nếp
+                  khiến bất kỳ ai thưởng thức cũng phải nhớ mãi. <br />
+                  -Giá tham khảo: 20.000 - 50.000 VND/tô <br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://maps.app.goo.gl/T6Fero1txmAtyBBj7"
+                    target="_blank"
+                    >Cháo cá Tích Nghi - 163 Hồ Ngọc Lân, Kinh Bắc, Bắc Ninh</a
+                  ><br />
+                </p>
+                <figure>
+                  <img
+                    src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Thay%20Anh%20Traffic%20Tieng%20Viet/dac%20san%20bac%20ninh/thuc-khach-co-the-goi-them-trung-cut-va-banh-quay-an-kem-chao"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Cháo cá Tích Nghi"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Thịt chuột Đình Bảng
+              </summary>
+              <article>
+                <p>
+                  -Những chú chuột đồng săn bắt tự nhiên sẽ được làm sạch và chế
+                  biến thành các món nướng, kho hoặc xào. Thực khách sẽ cảm nhận
+                  được vị ngọt, thơm, mềm và không hề có mùi tanh, mang lại trải
+                  nghiệm ẩm thực đậm đà, mới lạ và hấp dẫn. <br />
+                  -Giá tham khảo: 100.000 - 150.000 VND/kg <br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://maps.app.goo.gl/2piDseghtWUgkdfy7"
+                    target="_blank"
+                    >Nhà hàng Từ An - khu đô thị Dabaco, Từ Sơn, Bắc Ninh </a
+                  ><br />
+                </p>
+                <figure>
+                  <img
+                    src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Thay%20Anh%20Traffic%20Tieng%20Viet/dac%20san%20bac%20ninh/thit-chuot-dinh-bang-khien-thuc-khach-nho-mai-khong-thoi"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Thịt chuột Đình Bảng"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Vải thiều Lục Ngạn
+              </summary>
+              <article>
+                <p>
+                  -Vải thiều Lục Ngạn (Bắc Giang) là đặc sản nổi tiếng Việt Nam,
+                  có quả to, vỏ đỏ tươi, cùi dày, hạt nhỏ, vị ngọt đậm đà, nhiều
+                  nước và hương thơm đặc trưng, được ưa chuộng trong nước và
+                  xuất khẩu<br />
+                  -Giá tham khảo: Hàng thường: 11.000 - 18.000 VNĐ/kg. Hàng loại
+                  1, có mã vùng trồng (xuất khẩu/cao cấp): 25.000 - 35.000
+                  VNĐ/kg. <br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://share.google/hrw0jZEo9jr2TVapL"
+                    target="_blank"
+                    >Nghĩa, Nghĩa Hồ, Lục Ngạn, Bắc Giang, Bắc Giang, 230000</a
+                  >
+                  <br />
+                </p>
+                <figure>
+                  <img
+                    src="https://vaithieu.net/wp-content/uploads/2017/11/vai-thieu-tuoi-luc-ngan.jpg"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Vải thiều Lục Ngạn"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >
+                    <br />
+                    <a href="https://vaithieu.net/gia-vai/" target="_blank"
+                      >vaithieu.net</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">Mì Chũ</summary>
+              <article>
+                <p>
+                  -Mì Chũ (hay mì gạo Chũ) là đặc sản nổi tiếng của vùng Lục
+                  Ngạn, Bắc Giang, được làm từ gạo Bao Thai Hồng, có sợi trắng
+                  ngà, dai, dẻo, thơm mùi gạo tự nhiên và không bị nát khi nấu,
+                  <br />
+                  -Giá tham khảo: 35.000 VNĐ - 75.000 VNĐ/kg <br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://maps.app.goo.gl/AyAR2R2dsrwgPkLe7"
+                    target="_blank"
+                    >122 Lê Lợi, Phường Trần Phú, Bắc Giang, Việt Nam</a
+                  >
+                  <br />
+                </p>
+                <figure>
+                  <img
+                    src="https://foodelivietnam.com/wp-content/uploads/2022/01/unnamed-24.png"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Mì Chũ"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Nem bùi Ninh Xá
+              </summary>
+              <article>
+                <p>
+                  -Nem bùi Ninh Xá được làm từ thịt lợn tươi ngon, tẩm ướp gia
+                  vị đặc trưng và lá sung tươi, tạo nên hương vị độc đáo. Nem
+                  được gói bằng lá chuối, khi ăn có vị giòn, ngọt, và thơm. Đây
+                  là món ăn không thể thiếu trong các dịp lễ hội, tết cổ truyền,
+                  mang đậm nét văn hóa ẩm thực vùng đất Ninh Xá. <br />
+                  -Giá tham khảo: 25.000 - 40.000 VND/phần <br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://maps.app.goo.gl/4gbotxt2tUvySBdA6"
+                    target="_blank"
+                    >Phố Mới, Ninh Xá, Thuận Thành, Bắc Ninh, Việt Nam</a
+                  >
+                  <br />
+                </p>
+                <figure>
+                  <img
+                    src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Thay%20Anh%20Traffic%20Tieng%20Viet/dac%20san%20bac%20ninh/nem-bui-da-tr-thanh-mon-an-duoc-nhieu-nguoi-yeu-thich-va-tim-mua-moi-dip-ghe-bac-ninh"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Nem bùi Ninh Xá"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Bánh Phu Thê Đình Bảng
+              </summary>
+              <article>
+                <p>
+                  -Đây là món bánh thường xuất hiện trong các lễ cưới, biểu
+                  tượng cho sự gắn kết, vĩnh cửu giữa vợ chồng. Thành phần chính
+                  của bánh gồm bột nếp, đậu xanh, dừa và đường phèn. Bánh được
+                  gói trong lá chuối và mang hấp, tạo nên một thành phẩm mang
+                  hương thơm tự nhiên, vị ngọt ngào, thơm mát rất đặc trưng.
+                  <br />
+                  -Giá tham khảo: 30.000 - 40.000 VND/cặp <br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://maps.app.goo.gl/R2PZKhcF1QRtJL8A7"
+                    target="_blank"
+                    >291 Đ. Trần Phú, Đình Bảng, Từ Sơn, Bắc Ninh, Việt Nam</a
+                  >
+                  <br />
+                </p>
+                <figure>
+                  <img
+                    src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Thay%20Anh%20Traffic%20Tieng%20Viet/dac%20san%20bac%20ninh/voi-hinh-dang-dep-mat-va-huong-vi-tuyet-voi-banh-phu-the-dinh-bang-luon-la-lua-chon-yeu-thich-trong"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Bánh Phu Thê"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Tương Đình Tổ
+              </summary>
+              <article>
+                <p>
+                  -Để làm nên tương Đình Tổ sẽ cần đến đậu nành, gạo và nhiều
+                  loại gia vị để tạo nên một loại tương thơm ngon, đậm đà, vị
+                  mặn vừa phải. Tương Đình Tổ là món quà tặng ý nghĩa để làm gia
+                  vị cho các món ăn như rau muống xào, canh hay thịt kho, làm
+                  cho bữa ăn thêm phần hấp dẫn và độc đáo. <br />
+                  -Giá tham khảo: 30.000 - 40.000 VND/tô<br />
+                  -Địa chỉ thưởng thức: <br />
+                  <a
+                    href="https://maps.app.goo.gl/osHuMqMNbvvtDDQH6"
+                    target="_blank"
+                    >53C3+H4C, Nguyễn Văn Cừ, Võ Cường, Bắc Ninh, Việt Nam</a
+                  >
+                  <br />
+                </p>
+                <figure>
+                  <img
+                    src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Thay%20Anh%20Traffic%20Tieng%20Viet/dac%20san%20bac%20ninh/tuong-dinh-to-khong-chi-mang-dam-huong-vi-truyen-thong-ma-con-chua-dung-gia-tri-van-hoa-am-thuc-cua"
+                    class="w3-container"
+                    style="max-width: 400px"
+                    alt="Tương Đình Tổ"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin và hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+        </ol>
+      </section>
+      <hr />
+
+      <section class="w3-row w3-padding-16" id="DULICH">
+        <h1 class="w3-center" style="font-size: 50px">DU LỊCH</h1>
+        <h2>-Bắc Ninh có những điểm du lịch nổi tiếng như:</h2>
+        <ol>
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding summary">
+                Khu du lịch văn hoá Quan họ Cổ Mễ (thành phố Bắc Ninh)
+              </summary>
+              <article>
+                <p class="detail-content">
+                  -Khu Du lịch Văn hoá Quan họ Cô Mễ là dự án được quy hoạch tại
+                  khu vực Cô Mễ, phường Vũ Ninh, thành phố Bắc Ninh nhằm kết hợp
+                  các giá trị văn hoá truyền thống với dịch vụ du lịch – thương
+                  mại – sinh thái. Khi hoàn thành, khu này dự kiến trở thành một
+                  điểm đến hấp dẫn, giao lưu văn hoá và du lịch quanh năm, phục
+                  vụ khách lữ hành đến với di tích Đền Bà Chúa Kho và nghệ thuật
+                  Quan họ đặc sắc của vùng Kinh Bắc.
+                  <br />
+                  <a
+                    href="https://maps.app.goo.gl/yQqg3KgPuugZ2Zys6"
+                    target="_blank"
+                    >-Địa điểm: 53XJ+XVQ, Đ. Bà Chúa Kho, P. Đáp Cầu, Bắc Ninh,
+                    Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://images.baodantoc.vn/uploads/banchuyende/2023/Bn/quan-ho-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Quan họ Cổ Mễ"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin:
+                    <a
+                      href="https://dulichvn.org.vn/index.php/item/5976"
+                      target="_blank"
+                      >dulichvn.org.vn</a
+                    >
+                    | Nguồn hình ảnh:
+                    <a
+                      href="https://www.vietnamairlines.com/de/vi/useful-information/travel-guide/dac-san-bac-ninh"
+                      target="_blank"
+                      >Vietnam Airlines</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Khu du lịch văn hoá Đền Đầm (thành phố Từ Sơn)
+              </summary>
+              <article>
+                <p>
+                  -Đền nằm trên một gò đất nổi giữa đầm nước mênh mông phía Nam
+                  làng Phù Lưu nên địa phương gọi là đền Đầm. Gắn với tục thờ
+                  Mẫu và đức thánh Trần. Đền được xây dựng từ thời Lê, phong
+                  cách nghệ thuật kiến trúc thời Nguyễn. Lễ hội tổ chức vào ngày
+                  20 tháng 2 âm lịch hàng năm.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/kYRh8kjCnSPEZevC6"
+                    target="_blank"
+                    >295, thôn Phật Tích, Tiên Du, Bắc Ninh 790000, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://phuday.com/wp-content/uploads/2022/10/den-dam-o-dau-6.png"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Đền Đầm"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn thông tin:
+                    <a
+                      href="https://tuson.bacninh.gov.vn/news/-/details/51508/-en-am-phu-luu-thuy-tien-linh-tu-2857901?utm"
+                      target="_blank"
+                      >Cổng thông tin Từ Sơn</a
+                    >
+                    | Nguồn hình ảnh:
+                    <a
+                      href="https://phuday.com/den-dam-ngoi-den-linh-thieng.html"
+                      target="_blank"
+                      >phuday.com</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Khu du lịch văn hoá Phật Tích (huyện Tiên Du)
+              </summary>
+              <article>
+                <p>
+                  -Chùa Phật Tích (Vạn Phúc Tự) được xây dựng từ năm 1057 dưới
+                  triều nhà Lý. Nổi tiếng với tượng Phật A Di Đà bằng đá cao 27m
+                  trên đỉnh núi. Lễ hội diễn ra từ mùng 3 đến mùng 5 Tết Nguyên
+                  đán.
+                  <br />
+                  <a
+                    href="https://maps.app.goo.gl/afjz97w8f6boGsEN7"
+                    target="_blank"
+                    >Địa điểm: 4X77+QWV, Tân Hồng, Từ Sơn, Bắc Ninh, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/chua-phat-tich-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Chùa Phật Tích"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Đền Bà Chúa Kho
+              </summary>
+              <article>
+                <p>
+                  -Thờ bà Chúa Kho - người có công tích trữ lương thực giúp dân
+                  no đủ thời Lý. Du khách thường đến đây làm lễ “vay – trả” lộc
+                  đầu năm để cầu tài lộc.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/kgC2uCnN7zuna4aY9"
+                    target="_blank"
+                    >Khu, Cổ Mễ, Tp. Bắc Ninh, Bắc Ninh 790000, Vietnam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/di-le-den-ba-chua-kho.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Đền Bà Chúa Kho"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Chùa Bút Tháp
+              </summary>
+              <article>
+                <p>
+                  -Tên chữ Ninh Phúc Tự, nổi bật với tháp Báo Nghiêm hình ngọn
+                  bút bằng đá xanh cao 13,05m. Đây là Di tích quốc gia đặc biệt
+                  bên sông Đuống.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/VBQsJz1m52QzFGbb8"
+                    target="_blank"
+                    >326C+9VG, Bút Tháp, Thuận Thành, Bắc Ninh, Vietnam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/chua-but-thap-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Chùa Bút Tháp"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Làng tranh Đông Hồ
+              </summary>
+              <article>
+                <p>
+                  -Làng nghề truyền thống gắn liền với dòng tranh dân gian mộc
+                  mạc, phản ánh đời sống người dân xưa. Du khách có thể trải
+                  nghiệm quy trình in màu trên giấy điệp.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/pKNbBJxJMWZMe4W67"
+                    target="_blank"
+                    >Thôn Đông Khê, Song Hồ, Thuận Thành, Bắc Ninh</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/tham-quan-lang-tranh-dong-ho-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Làng tranh Đông Hồ"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Làng gốm Phù Lãng
+              </summary>
+              <article>
+                <p>
+                  -Hình thành từ thời Trần bên sông Cầu thơ mộng. Sản phẩm đặc
+                  trưng là gốm sắc nâu vàng, đỏ mộc mạc như chậu cảnh, nồi đất,
+                  chum vại.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/P8Z5PSC1rLrQJ7q16"
+                    target="_blank"
+                    >Phù Lãng, Quế Võ, Bắc Ninh, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/lang-gom-phu-lang-bac-ninh-1.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Làng gốm Phù Lãng"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Văn Miếu Bắc Ninh
+              </summary>
+              <article>
+                <p>
+                  -Nằm trên núi Phúc Sơn, thờ Khổng Tử và các bậc hiền triết.
+                  Nơi đây lưu giữ 15 tấm bia đá ghi danh gần 700 vị đại khoa
+                  vùng Kinh Bắc hiếu học.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/rh43GcoNwe2R9UEE6"
+                    target="_blank"
+                    >Đại Phúc, Bắc Ninh, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/van-mieu-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Văn Miếu Bắc Ninh"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Chùa Tiêu
+              </summary>
+              <article>
+                <p>
+                  -Ngôi chùa cổ gắn liền với Quốc sư Vạn Hạnh và vua Lý Công
+                  Uẩn. Đặc biệt nơi đây lưu giữ nhục thân Thiền sư Như Trí gần
+                  300 năm không phân hủy.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/xVogfnbNqhnpMKDL6"
+                    target="_blank"
+                    >Tiêu Thượng, Tương Giang, Từ Sơn, Bắc Ninh</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/chua-tieu-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Chùa Tiêu"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Cây cô đơn đê Hữu Chấp
+              </summary>
+              <article>
+                <p>
+                  -Cây cổ thụ cao hơn 20m đứng đơn độc giữa cánh đồng lộng gió,
+                  tạo nên khung cảnh lãng mạn. Đây là điểm check-in cực hot của
+                  giới trẻ khi đến Kinh Bắc.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/7L3rh2PAfGDTqsSj7"
+                    target="_blank"
+                    >63F6+RF, Hoà Long, Bắc Ninh, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/cay-co-don-de-huu-chap-1.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Cây cô đơn"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Đình Đình Bảng
+              </summary>
+              <article>
+                <p>
+                  -Được ví như “bảo tàng chạm khắc gỗ thế kỷ XVIII” với kiến
+                  trúc bề thế và hệ mái cong uyển chuyển. Đình thờ các vị thành
+                  hoàng có công với dân với làng.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/2qqurYdaBL4s1RWR7"
+                    target="_blank"
+                    >Đình, Đình Bảng, Từ Sơn, Bắc Ninh, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/dinh-dinh-bang-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Đình Đình Bảng"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Đền Cùng – Giếng Ngọc
+              </summary>
+              <article>
+                <p>
+                  -Địa điểm linh thiêng gắn với Giếng Ngọc nước trong xanh quanh
+                  năm. Người dân tin rằng uống nước giếng sẽ mang lại sức khỏe
+                  và may mắn.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/HAwSxYt5SpesJLcc6"
+                    target="_blank"
+                    >627X+2VP, Đường Vua Bà, Hoà Long, Bắc Ninh, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/den-cung-gieng-ngoc-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Đền Cùng Giếng Ngọc"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Thành cổ Bắc Ninh
+              </summary>
+              <article>
+                <p>
+                  -Xây dựng năm 1805 dưới triều vua Gia Long, là tòa thành hình
+                  lục giác đầu tiên tại Việt Nam. Từng là trung tâm quân sự và
+                  hành chính quan trọng vùng Kinh Bắc.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/RSwRKmJ3pJsD67xe8"
+                    target="_blank"
+                    >53M5+9PG, P.Vệ An, Bắc Ninh, Việt Nam</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/di-tich-thanh-co-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Thành cổ Bắc Ninh"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Lăng và đền thờ Kinh Dương Vương
+              </summary>
+              <article>
+                <p>
+                  -Nơi thờ vị vua thủy tổ của dân tộc Việt Nam. Hàng năm vào
+                  ngày 18 tháng Giêng âm lịch, lễ hội được tổ chức rất trang
+                  trọng để tưởng nhớ công đức tổ tiên.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/Xxk16YxLmeVggVFV7"
+                    target="_blank"
+                    >Á Lữ, Đại Đồng Thành, Thuận Thành, Bắc Ninh</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/den-tho-kinh-duong-vuong-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Đền thờ Kinh Dương Vương"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary class="w3-bar-item w3-button w3-padding">
+                Bảo tàng Hoàng gia Nam Hồng
+              </summary>
+              <article>
+                <p>
+                  -Bảo tàng tư nhân lưu giữ 5.000 hiện vật quý, bao gồm ấn vàng
+                  "Hoàng đế chi bảo". Nơi lý tưởng để tìm hiểu về cổ vật các
+                  triều đại phong kiến.
+                  <br />
+                  -Địa điểm:
+                  <a
+                    href="https://maps.app.goo.gl/Vtx3EgX15fmL2Usf8"
+                    target="_blank"
+                    >4X73+G2W, Đ. Trần Phú, Đình Bảng, Từ Sơn, Bắc Ninh</a
+                  >
+                </p>
+                <figure>
+                  <img
+                    src="https://static.vinwonders.com/production/2025/08/bao-tang-hoang-gia-nam-hong-bac-ninh.jpg"
+                    class="w3-container"
+                    style="max-width: 400px; height: auto"
+                    alt="Bảo tàng Nam Hồng"
+                  />
+                  <figcaption style="font-size: smaller">
+                    (Nguồn:
+                    <a
+                      href="https://vinwonders.com/vi/wonderpedia/news/du-lich-bac-ninh/"
+                      target="_blank"
+                      >VinWonders</a
+                    >)
+                  </figcaption>
+                </figure>
+              </article>
+            </details>
+          </li>
+        </ol>
+      </section>
+      <hr />
+      <script>
+        // Lấy tất cả thẻ summary
+        const summaries = document.querySelectorAll("summary");
+        // Thêm class 'ccc' cho tất cả
+        summaries.forEach((s) => s.classList.add("ccc"));
+      </script>
+
+      <section class="w3-row w3-padding-16" id="tiemnang">
+        <h1 class="w3-center" style="font-size: 50px">TIỀM NĂNG PHÁT TRIỂN</h1>
+        <article>
+          <h3>1. Về quản lý nhà nước</h3>
+          <ul>
+            <li>Tinh gọn bộ máy, sắp xếp đơn vị hành chính hiệu quả.</li>
+            <li>
+              Giảm biên chế, nâng cao chất lượng đội ngũ cán bộ, công chức, viên
+              chức.
+            </li>
+            <li>
+              Bố trí, cơ cấu lại nhân sự phù hợp vị trí việc làm, nâng cao hiệu
+              lực quản lý.
+            </li>
+            <li>Góp phần cải cách tiền lương và nâng cao đời sống cán bộ.</li>
+          </ul>
+
+          <h3>2. Về kinh tế – xã hội</h3>
+          <ul>
+            <li>
+              Mở rộng không gian phát triển, khai thác tốt lợi thế vị trí địa lý
+              – văn hoá – nguồn lực.
+            </li>
+            <li>
+              Tăng khả năng thu hút đầu tư, mở rộng quy hoạch, phát triển hạ
+              tầng lớn của vùng.
+            </li>
+            <li>
+              Tạo điều kiện để tỉnh Bắc Ninh mới trở thành trung tâm công nghiệp
+              – logistics – sản xuất quy mô lớn của miền Bắc.
+            </li>
+            <li>
+              Thúc đẩy phát triển các tuyến giao thông chiến lược liên vùng.
+            </li>
+            <li>Giảm gánh nặng chi ngân sách nhờ tinh giản bộ máy.</li>
+            <li>
+              Hệ thống giáo dục, y tế sau sáp nhập được kiện toàn và phục vụ
+              người dân tốt hơn.
+            </li>
+            <li>
+              ➡️ Tiềm năng lớn để Bắc Ninh (mới) trở thành “thủ phủ công nghiệp
+              phía Bắc”.
+            </li>
+          </ul>
+
+          <h3>3. Về quốc phòng – an ninh</h3>
+          <ul>
+            <li>
+              Tạo điều kiện quy hoạch thế trận quốc phòng gắn với phát triển
+              kinh tế – xã hội.
+            </li>
+            <li>
+              Tăng cường năng lực của lực lượng công an, quân sự; nâng cao đảm
+              bảo an ninh trật tự.
+            </li>
+            <li>
+              Đầu tư quốc phòng tập trung hơn, giúp củng cố an ninh chính trị,
+              trật tự xã hội.
+            </li>
+          </ul>
+
+          <h3>4. Về cải cách hành chính & dịch vụ công</h3>
+          <ul>
+            <li>
+              Bộ máy tinh gọn hơn, đội ngũ công chức chất lượng hơn → phục vụ
+              người dân tốt hơn.
+            </li>
+            <li>
+              Trung tâm hành chính công, bộ phận một cửa được kiện toàn, hoạt
+              động hiệu quả.
+            </li>
+            <li>
+              Ứng dụng CNTT và dịch vụ công trực tuyến đồng bộ, thuận tiện hơn
+              cho người dân.
+            </li>
+          </ul>
+
+          <p style="font-size: 15px" class="w3-center">
+            (nguồn thông tin :
+            <a
+              href="https://hcc.bacgiang.gov.vn/chi-tiet-tin-tuc/-/asset_publisher/M0UUAFstbTMq/content/tiem-nang-phat-trien-cua-tinh-bac-ninh-moi-sau-sat-nhap?inheritRedirect=false"
+              target="_blank"
+              >bacgiang.gov.vn</a
+            >
+            )
+          </p>
+        </article>
+      </section>
+      <hr />
+    </main>
+    <footer class="w3-center w3-light-grey w3-padding-32">
+      <p>HẾT!</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+        if (navMenu) {
+          navMenu.classList.toggle("w3-hide");
+        }
+      }
+    </script>
+  </body>
+</html>

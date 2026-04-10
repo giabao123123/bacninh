@@ -1,0 +1,857 @@
+/* =============================================
+   VĨNH LONG - CSS (đã loại bỏ phần trùng W3.CSS)
+   Load SAU: <link rel="stylesheet" href="w3.css">
+   ============================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap");
+
+/* ============ BIẾN MÀU ============ */
+:root {
+  --primary-green: #0a3d2e;
+  --secondary-green: #1a5c3d;
+  --accent-red: #c8102e;
+  --accent-yellow: #ffcd00;
+  --light-green: #e9f5f0;
+  --green-deep: #0d4a2f;
+  --green-mid: #1a6b44;
+  --green-light: #2d9e65;
+  --green-pale: #e8f5ee;
+  --river-blue: #1a6b8a;
+  --gold: #c9a227;
+  --gold-light: #f5e6b0;
+  --red-warm: #c0392b;
+  --dark: #1c1c1c;
+  --gray-bg: #f4f4f2;
+  --font-display: "Playfair Display", "Times New Roman", serif;
+  --font-body: "Be Vietnam Pro", "Times New Roman", sans-serif;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.18);
+  --transition: all 0.3s ease;
+  --radius: 10px;
+}
+
+/* ============ BASE ============ */
+/* html scroll-behavior: W3.CSS không có → giữ */
+html {
+  scroll-behavior: smooth;
+}
+
+/* body font/bg: W3.CSS dùng Verdana 15px → override */
+body {
+  font-family: var(--font-body);
+  padding-top: 110px;
+  background-color: var(--gray-bg);
+  color: var(--dark);
+  line-height: 1.75; /* W3.CSS dùng 1.5 → override */
+}
+
+/* ============ TYPOGRAPHY ============ */
+/* W3.CSS đặt h1-h6 font Segoe UI, size cứng → override toàn bộ */
+h1 {
+  font-family: var(--font-display);
+  color: var(--green-deep);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-red), var(--accent-yellow));
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+h1.w3-center::after {
+  margin: 0.5rem auto 0;
+}
+h1[style*="color: red"],
+h1[style*="color:red"] {
+  color: var(--accent-red) !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  color: var(--green-deep);
+  letter-spacing: 0.5px;
+}
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+h3 {
+  font-size: 1.4rem;
+}
+
+/* W3.CSS: p không định nghĩa → thêm mới */
+p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2c2c2c;
+  margin-bottom: 1rem;
+}
+
+/* W3.CSS: li không định nghĩa → thêm mới */
+li {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 0.4rem;
+}
+
+/* W3.CSS: a { color: inherit } → override màu */
+a {
+  color: var(--river-blue);
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--accent-red);
+  text-decoration: underline;
+}
+
+/* W3.CSS: mark { background:#ff0; color:#000 } → override */
+mark {
+  background: linear-gradient(
+    120deg,
+    var(--gold-light) 0%,
+    var(--gold-light) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  background-position: 0 80%;
+  color: var(--dark);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+/* W3.CSS không style u → thêm mới */
+u {
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 1px;
+  color: var(--green-deep);
+  font-weight: 600;
+}
+
+/* W3.CSS: hr { border-top:1px solid #eee } → override */
+hr {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff9800,
+    var(--accent-yellow),
+    #ff9800,
+    transparent
+  );
+  border: none;
+  max-width: 100%;
+  margin: 2.5rem 0;
+  border-radius: 1px;
+}
+
+/* ================================================
+   GIỮ NGUYÊN: MENU & NAVBAR (cam/đỏ gốc)
+   W3.CSS có .w3-bar, .w3-bar-item, .w3-button cơ bản
+   → chỉ giữ những gì W3.CSS KHÔNG có
+   ================================================ */
+
+/* Neon box: W3.CSS không có → giữ nguyên */
+.neon-box {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 9px 9px;
+  color: #fffaf0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-radius: 12px;
+  z-index: 1;
+}
+.neon-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 300%;
+  animation: borderRun 6s linear infinite;
+  z-index: -1;
+  border-radius: 14px;
+}
+.neon-box::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: linear-gradient(180deg, #ff9800, #ff5722);
+  border-radius: 10px;
+  z-index: -1;
+}
+@keyframes borderRun {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+/* nav ul: W3.CSS không style → giữ */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav ul li {
+  margin: 10px;
+}
+
+/* #toggleBtn: custom → giữ */
+#toggleBtn {
+  padding: 10px 50px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Checkbox ẩn: W3.CSS không có → giữ */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger: W3.CSS không có → giữ */
+.menu-icon {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+/* Menu mobile: W3.CSS không có → giữ */
+.menu {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  z-index: 1000;
+  height: 100vh;
+  background: linear-gradient(180deg, #ff9800, #ff5722) !important;
+  padding-top: 70px;
+  transition: right 0.4s ease;
+}
+#menu-toggle:checked ~ .menu {
+  right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s;
+}
+.menu a:hover {
+  background-color: #fff3cd;
+  transform: scale(1.08);
+}
+
+.menu li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  display: none;
+}
+.menu li:last-child {
+  border-bottom: none;
+}
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+/* Menu ngang cuộn: W3.CSS không có → giữ */
+.menu-scroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  flex: 1;
+}
+.menu-scroll::-webkit-scrollbar {
+  display: none;
+}
+.menu-scroll a {
+  transition: transform 0.25s ease;
+}
+.menu-scroll a:hover {
+  animation: pulse 0.8s infinite;
+}
+
+/* .w3-bar-item: W3.CSS có padding+float cơ bản → chỉ thêm flex */
+.w3-bar-item {
+  flex: 0 0 auto;
+}
+
+/* .w3-button:hover W3.CSS có color:#000 bg:#ccc → override màu crimson */
+.w3-bar-item.w3-button:hover {
+  background-color: crimson !important;
+  color: #000 !important;
+  border-radius: 8px;
+}
+
+/* Nút scroll: W3.CSS không có → giữ */
+.scroll-btn {
+  color: black;
+  background: #ffffff;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.scroll-btn:hover {
+  background: #ddd;
+}
+button.scroll-btn {
+  border: solid;
+  border-radius: 10px;
+  color: black;
+}
+button.scroll-btn.left-btn {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+button.scroll-btn.right-btn {
+  margin-right: 20px;
+}
+
+/* ============ MARQUEE ============ */
+.box {
+  width: 100%;
+  max-width: 100%;
+  height: 56px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    var(--green-deep),
+    var(--river-blue),
+    var(--green-deep)
+  );
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 2px;
+  color: white;
+  padding-right: 320px;
+  box-shadow: 0 3px 12px rgba(13, 74, 47, 0.25);
+}
+.text {
+  position: absolute;
+  left: 100%;
+  animation: marqueeScroll 18s linear infinite;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.text::before {
+  content: "🌿 ";
+  margin-right: 8px;
+}
+
+/* Đổi tên keyframe để tránh xung đột với bất kỳ thứ gì */
+@keyframes marqueeScroll {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* ============ BUTTONS & ANIMATIONS ============ */
+/* W3.CSS có .w3-btn:hover box-shadow → button thường không có → giữ */
+button {
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+button:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+button:active {
+  transform: scale(1.05);
+}
+
+label.menu-icon {
+  animation: pulse 1.5s infinite;
+}
+label:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+button.audio {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ============ SELECTION ============ */
+/* W3.CSS không có → giữ */
+::selection {
+  color: rgb(255, 253, 130);
+  background: rgb(255, 145, 145);
+}
+::-moz-selection {
+  color: rgb(255, 253, 130);
+  background: rgb(255, 145, 145);
+}
+
+/* ============ BACK TO TOP ============ */
+#backToTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: block;
+}
+#backToTop a {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #8bc34a, #558b2f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  transition: var(--transition);
+}
+#backToTop a:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #9ccc65, #689f38);
+  text-decoration: none;
+}
+.arrow {
+  width: 10px;
+  height: 10px;
+  border-left: 3px solid #fff;
+  border-top: 3px solid #fff;
+  transform: rotate(45deg);
+}
+.arrow-1 {
+  animation: arrowUp 1.4s infinite;
+}
+.arrow-2 {
+  animation: arrowUp 1.4s infinite;
+  animation-delay: 0.2s;
+}
+@keyframes arrowUp {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: rotate(45deg) translateY(2px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translateY(-2px);
+  }
+}
+
+.scroll-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--red-warm), #e74c3c);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-md);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+.scroll-top-button:hover {
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  transform: translateY(-5px);
+}
+.scroll-top-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ============ CARD ============ */
+/* W3.CSS có .w3-card box-shadow cơ bản → class .card custom khác → giữ */
+.card {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  animation: fadeInUp 0.6s ease;
+  border-top: 4px solid var(--green-light);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ HERO ============ */
+.hero-overlay {
+  max-width: 900px;
+  padding: 0 20px;
+}
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-divider {
+  width: 150px;
+  height: 4px;
+  background-color: var(--accent-red);
+  margin: 2rem auto;
+}
+.hero-quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  color: var(--accent-yellow);
+}
+.hero-cta-button {
+  display: inline-block;
+  background-color: var(--accent-red);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+.hero-cta-button:hover {
+  background-color: transparent;
+  border-color: var(--accent-yellow);
+  color: var(--accent-yellow);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================================
+   NỘI DUNG: Ảnh, Bảng, Details, Layout
+   ================================================ */
+
+/* Ảnh: W3.CSS chỉ có vertical-align + .w3-image → thêm hover/radius */
+img {
+  max-width: 100%;
+  height: auto;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  cursor: pointer;
+  border-radius: var(--radius);
+  display: block;
+}
+img:hover {
+  transform: rotate(0.3deg) scale(1.015);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Bảng: W3.CSS chỉ style .w3-table → table thường chưa có → giữ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.9rem;
+}
+th {
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  color: white;
+  font-family: var(--font-body);
+  font-weight: 700;
+  padding: 10px 8px;
+  letter-spacing: 0.3px;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+td {
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  font-size: 0.88rem;
+}
+tr:nth-child(even) td {
+  background-color: rgba(232, 245, 238, 0.3);
+}
+tr:hover td {
+  background-color: rgba(45, 158, 101, 0.06);
+  transition: background 0.2s;
+}
+
+/* Details/Summary: W3.CSS chỉ có summary{display:list-item} → override toàn bộ */
+details {
+  margin-bottom: 10px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid #b8dfc9;
+  transition: var(--transition);
+}
+details:hover {
+  border-color: var(--green-light);
+  box-shadow: var(--shadow-sm);
+}
+details[open] {
+  border-color: var(--secondary-green);
+  box-shadow: var(--shadow-md);
+}
+
+summary {
+  background: linear-gradient(135deg, var(--green-pale), #d4f0e2) !important;
+  border: 2px solid var(--secondary-green) !important;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  list-style: none;
+  border-radius: 6px !important;
+  padding: 11px 16px !important;
+  transition: background 0.3s ease !important;
+  color: var(--primary-green);
+  letter-spacing: 0.3px;
+}
+summary:hover {
+  background: linear-gradient(135deg, #a8dbbf, #7ecda2) !important;
+}
+details[open] summary {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-green),
+    var(--green-deep)
+  ) !important;
+  color: white !important;
+  border-bottom-color: var(--gold) !important;
+  border-radius: 6px 6px 0 0 !important;
+}
+details[open] summary:hover {
+  background: linear-gradient(135deg, var(--red-warm), #96281b) !important;
+}
+summary:-webkit-details-marker {
+  display: none;
+}
+summary::before {
+  content: "▶ ";
+  display: inline-block;
+  transition: transform 0.25s ease;
+  margin-right: 4px;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+/* ============ W3.CSS OVERRIDES ============ */
+
+/* .w3-content: W3.CSS max-width:980px → override 1100px */
+.w3-content {
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* .w3-light-grey: W3.CSS bg:#f1f1f1 → override màu trang */
+.w3-light-grey {
+  background-color: var(--gray-bg) !important;
+}
+
+/* .w3-row, .w3-row-padding: W3.CSS không style bg/shadow → thêm card effect */
+.w3-row.w3-padding-16,
+.w3-row-padding.w3-padding-16,
+.w3-container.w3-padding-16 {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem !important;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--green-light);
+  transition: var(--transition);
+}
+.w3-row.w3-padding-16:hover,
+.w3-row-padding.w3-padding-16:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* .w3-center: W3.CSS đã có text-align:center!important → không cần lặp lại */
+/* .w3-padding-16: W3.CSS đã có padding-top/bottom:16px → không cần lặp lại */
+
+/* .w3-animate-left: W3.CSS đã có → không cần lặp lại */
+
+/* Footer */
+footer.w3-center {
+  background: linear-gradient(135deg, var(--green-deep), #071e14) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  padding: 2.5rem !important;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  border-top: 4px solid var(--accent-yellow);
+}
+footer.w3-center p {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 992px) {
+  .w3-row.w3-padding-16,
+  .w3-row-padding.w3-padding-16,
+  .w3-container.w3-padding-16 {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 90px;
+  }
+  .menu-icon {
+    display: inline-block;
+  }
+  .menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 0;
+    border: 1px solid #333;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 0;
+  }
+  #menu-toggle:checked + .menu-icon + .menu {
+    max-height: 1000px;
+    margin-top: 5px;
+  }
+  .menu li {
+    display: block;
+    border-bottom: 1px solid #ddd;
+  }
+  h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .w3-row.w3-padding-16,
+  .w3-row-padding.w3-padding-16 {
+    padding: 1.2rem 1rem !important;
+    border-radius: 6px;
+  }
+  table {
+    font-size: 0.78rem;
+  }
+  th,
+  td {
+    padding: 6px 4px;
+  }
+  .box {
+    font-size: 1rem;
+    height: 46px;
+  }
+}
+
+@media print {
+  .menu,
+  .menu-icon,
+  #toggleBtn,
+  #backToTop,
+  .scroll-top-button,
+  .box {
+    display: none !important;
+  }
+  body {
+    padding-top: 0;
+  }
+}
