@@ -36,9 +36,8 @@
       </a>
     </aside>
     <aside class="box w3-right" style="margin-top: 2%">
-      <p class="text">Chào mừng đến với tỉnh Bắc Ninh!</p>
+      <p class="text">Chào mừng đến với Thành phố Bắc Ninh!</p>
     </aside>
-
     <header class="w3-top">
       <nav
         class="w3-bar w3-white w3-padding w3-card"
@@ -82,17 +81,6 @@
             >
           </li>
         </ul>
-        <script>
-          const menuLinks = document.querySelectorAll("#menu-list a");
-          const menuToggle = document.getElementById("menu-toggle");
-          menuLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-              if (window.innerWidth <= 768) {
-                menuToggle.checked = false;
-              }
-            });
-          });
-        </script>
         <nav
           style="
             background: linear-gradient(180deg, #ff9800, #ff5722);
@@ -132,22 +120,7 @@
           </div>
         </nav>
       </nav>
-      <script>
-        const menuScroll = document.querySelector(".menu-scroll");
-        const btnLeft = document.querySelector(".left-btn");
-        const btnRight = document.querySelector(".right-btn");
-        const step = 200;
-        if (btnRight && btnLeft && menuScroll) {
-          btnRight.addEventListener("click", () => {
-            menuScroll.scrollLeft += step;
-          });
-          btnLeft.addEventListener("click", () => {
-            menuScroll.scrollLeft -= step;
-          });
-        }
-      </script>
     </header>
-
     <main class="w3-content" style="max-width: 1100px">
       <section class="w3-row w3-padding-16 w3-center" id="about">
         <h1 class="w3-center" style="color: red; font-size: 50px">
@@ -187,14 +160,13 @@
             <a
               href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
               target="_blank"
-              >wiki Bắc Ninh</a
+              >Wikipedia Bắc Ninh</a
             >
             )
           </figcaption>
         </figure>
       </section>
       <hr />
-
       <section class="w3-row-padding w3-padding-16" id="menu">
         <h1 class="w3-padding-16 w3-center" style="color: red; font-size: 50px">
           ĐỊA LÝ
@@ -227,7 +199,7 @@
             <a
               href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
               target="_blank"
-              >wiki Bắc Ninh</a
+              >Wikipedia Bắc Ninh</a
             >
             )
           </p>
@@ -252,7 +224,6 @@
         </figure>
       </section>
       <hr />
-
       <section class="w3-row w3-padding-16" id="DIEUKIENTUNHIEN">
         <h1 class="w3-center" style="font-size: 50px">ĐIỀU KIỆN TỰ NHIÊN</h1>
         <article>
@@ -294,13 +265,12 @@
             (nguồn thông tin:<a
               href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
               target="_blank"
-              >wiki Bắc Ninh</a
+              >Wikipedia Bắc Ninh</a
             >)
           </p>
         </article>
       </section>
       <hr />
-
       <section
         class="w3-container w3-padding-16 table-responsive"
         style="overflow-x: auto"
@@ -318,7 +288,6 @@
             1.400 - 1.700 mm. Nhiệt độ trung bình: 23,3 °C. Số giờ nắng trong
             năm: 1.530 - 1.776 giờ. Độ ẩm tương đối trung bình: 79%.
           </p>
-
           <table
             style="
               width: 100%;
@@ -602,7 +571,7 @@
             <a
               href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
               target="_blank"
-              >wiki Bắc Ninh</a
+              >Wikipedia Bắc Ninh</a
             >)
           </p>
         </article>
@@ -612,6 +581,10 @@
         <h1 class="w3-padding-16" style="color: red; font-size: 50px">
           DỰ BÁO THỜI TIẾT TRONG TỈNH
         </h1>
+        <p>
+          ⚠️ Dữ liệu thời tiết hiện vẫn theo đơn vị hành chính cũ — chưa cập
+          nhật sau sáp nhập tỉnh.
+        </p>
         <div
           style="
             max-width: 760px;
@@ -635,7 +608,6 @@
           >
             Gõ tên xã / phường / thị trấn để xem dự báo thời tiết
           </p>
-
           <div
             style="position: relative; max-width: 440px; margin: 0 auto 22px"
           >
@@ -688,7 +660,6 @@
               "
             ></div>
           </div>
-
           <div
             id="tt-box"
             style="
@@ -725,7 +696,6 @@
             </div>
           </div>
         </div>
-
         <script>
           var TT_AREAS = [
             {
@@ -768,7 +738,6 @@
               parent: "Tỉnh Bắc Ninh cũ",
               widget: `<!--Begin thoitiet.app widget --><iframe src="https://thoitiet247.vn/widget/embed/bac-ninh/tu-son?style=2&day=7&td=%23ffffff&ntd=%231c84ee&mvb=%23848484&mv=%231c84ee&mdk=%23dddddd&htd=true" id="widgeturl" width="100%" height="550px" scrolling="no" frameborder="0" allowtransparency="true" style="border:none;overflow:hidden;"></iframe><!-- End thoitiet.app widget -->`,
             },
-
             {
               name: "thị xã Việt Yên",
               parent: "Tỉnh Bắc Giang cũ",
@@ -827,9 +796,7 @@
               .replace(/[\u0300-\u036f]/g, "")
               .replace(/đ/g, "d");
           }
-
           var ttFiltered = TT_AREAS.slice();
-
           function ttFilter() {
             var q = ttNorm(document.getElementById("tt-input").value.trim());
             ttFiltered = q
@@ -840,13 +807,11 @@
             ttRender();
             document.getElementById("tt-drop").style.display = "block";
           }
-
           function ttShow() {
             ttFiltered = TT_AREAS.slice();
             ttRender();
             document.getElementById("tt-drop").style.display = "block";
           }
-
           function ttRender() {
             var dd = document.getElementById("tt-drop");
             if (!ttFiltered.length) {
@@ -877,7 +842,6 @@
               })
               .join("");
           }
-
           function ttSelect(idx) {
             var a = TT_AREAS[idx];
             document.getElementById("tt-input").value = a.name;
@@ -886,13 +850,10 @@
             if (a.parent) {
               locationTitle += " (" + a.parent + ")";
             }
-
             document.getElementById("tt-name").textContent = locationTitle;
             document.getElementById("tt-box").style.display = "block";
-
             var wrap = document.getElementById("tt-widget-wrap");
             var noEmbed = document.getElementById("tt-noembed");
-
             if (a.widget && a.widget.trim()) {
               wrap.innerHTML = a.widget;
               wrap.style.display = "block";
@@ -902,18 +863,45 @@
               wrap.style.display = "none";
               noEmbed.style.display = "block";
             }
-
             document
               .getElementById("tt-box")
               .scrollIntoView({ behavior: "smooth", block: "start" });
           }
-
           document.addEventListener("click", function (e) {
             var inp = document.getElementById("tt-input");
             var drop = document.getElementById("tt-drop");
             if (drop && e.target !== inp && !drop.contains(e.target))
               drop.style.display = "none";
           });
+          const menuScroll = document.querySelector(".menu-scroll");
+          const btnLeft = document.querySelector(".left-btn");
+          const btnRight = document.querySelector(".right-btn");
+          const step = 200;
+          if (btnRight && btnLeft && menuScroll) {
+            btnRight.addEventListener("click", () => {
+              menuScroll.scrollLeft += step;
+            });
+            btnLeft.addEventListener("click", () => {
+              menuScroll.scrollLeft -= step;
+            });
+          }
+          const menuLinks = document.querySelectorAll("#menu-list a");
+          const menuToggle = document.getElementById("menu-toggle");
+          menuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth <= 768) {
+                menuToggle.checked = false;
+              }
+            });
+          });
+          function toggleMenu() {
+            const navMenu = document.getElementById("navMenu");
+            if (navMenu) {
+              navMenu.classList.toggle("w3-hide");
+            }
+          }
+          const summaries = document.querySelectorAll("summary");
+          summaries.forEach((s) => s.classList.add("ccc"));
         </script>
       </section>
       <hr />
@@ -1023,13 +1011,12 @@
             <a
               href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
               target="_blank"
-              >wiki Bắc Ninh</a
+              >Wikipedia Bắc Ninh</a
             >)
           </p>
         </article>
       </section>
       <hr />
-
       <section class="w3-row w3-padding-16" id="VANHOA">
         <h1 class="w3-center" style="font-size: 50px">VĂN HOÁ, LỄ HỘI</h1>
         <article>
@@ -1110,13 +1097,12 @@
             <a
               href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
               target="_blank"
-              >wiki Bắc Ninh</a
+              >Wikipedia Bắc Ninh</a
             >)
           </p>
         </article>
       </section>
       <hr />
-
       <section class="w3-row w3-padding-16" id="DITICH">
         <h1 class="w3-center" style="font-size: 50px">
           DI TÍCH, DI SẢN VĂN HOÁ
@@ -1179,7 +1165,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Chùa Dâu</strong><br />
                 - Địa điểm:
@@ -1212,7 +1197,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Khu lăng mộ và đền thờ các vị vua triều Lý</strong
                 ><br />
@@ -1246,7 +1230,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Chùa Phật Tích</strong><br />
                 - Địa điểm:
@@ -1279,7 +1262,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Chùa Vĩnh Nghiêm</strong><br />
                 - Địa điểm:
@@ -1312,7 +1294,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Đình Đình Bảng</strong><br />
                 - Địa điểm:
@@ -1345,7 +1326,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Đình Thổ Hà</strong><br />
                 - Địa điểm:
@@ -1378,7 +1358,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Lăng Dinh Hương</strong><br />
                 - Địa điểm:
@@ -1411,7 +1390,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Lăng Họ Ngọ</strong><br />
                 - Địa điểm:
@@ -1444,7 +1422,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Chùa Hàm Long</strong><br />
                 - Địa điểm:
@@ -1477,7 +1454,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Chùa Tiêu</strong><br />
                 - Địa điểm:
@@ -1510,7 +1486,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Đình Quảng Bố</strong><br />
                 - Địa điểm:
@@ -1543,7 +1518,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Đền thờ Lê Văn Thịnh</strong><br />
                 - Địa điểm:
@@ -1576,7 +1550,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Chùa Thổ Hà</strong><br />
                 - Địa điểm:
@@ -1609,7 +1582,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Đình Ngọc Trì</strong><br />
                 - Địa điểm:
@@ -1642,7 +1614,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Chùa Lim (chùa Hồng Ân)</strong><br />
                 - Địa điểm:
@@ -1677,7 +1648,6 @@
               </li>
             </ol>
           </details>
-
           <details>
             <summary
               class="w3-bar-item w3-button w3-padding"
@@ -1877,12 +1847,11 @@
               <a
                 href="https://vi.wikipedia.org/wiki/Danh_s%C3%A1ch_di_t%C3%ADch,_di_s%E1%BA%A3n_v%C4%83n_h%C3%B3a_%E1%BB%9F_B%E1%BA%AFc_Ninh"
                 target="_blank"
-                >wiki di tích Bắc Ninh</a
+                >Wikipedia di tích Bắc Ninh</a
               >
               )
             </p>
           </details>
-
           <details>
             <summary
               class="w3-bar-item w3-button w3-padding"
@@ -1925,7 +1894,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Ca trù</strong> (Di sản văn hóa phi vật thể cần được bảo
                 tồn khẩn cấp)<br />
@@ -1954,7 +1922,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Dân ca Cao Lan</strong><br />
                 - Loại hình: Nghệ thuật trình diễn dân gian<br />
@@ -1968,7 +1935,6 @@
                   >)</small
                 >
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Tranh dân gian Đông Hồ</strong><br />
                 - Loại hình: Nghề thủ công truyền thống<br />
@@ -1996,7 +1962,6 @@
                   </figcaption>
                 </figure>
               </li>
-
               <li style="margin-bottom: 25px">
                 <strong>Nghề gốm Phù Lãng</strong><br />
                 - Loại hình: Nghề thủ công truyền thống<br />
@@ -2029,7 +1994,6 @@
         </article>
       </section>
       <hr />
-
       <section class="w3-row w3-padding-16" id="GIAODUC">
         <h1 class="w3-center" style="font-size: 50px">GIÁO DỤC</h1>
         <article>
@@ -2155,7 +2119,6 @@
         </article>
       </section>
       <hr />
-
       <section class="w3-row w3-padding-16" id="KINHTE">
         <h1 class="w3-center" style="font-size: 50px">KINH TẾ</h1>
         <article>
@@ -2221,7 +2184,6 @@
             -Tỷ lệ hộ nghèo: 0,85%. <br />
           </p>
         </article>
-
         <h2 style="text-align: center">Biểu đồ GRDP Bắc Ninh 1997–2024</h2>
         <p style="text-align: center">Đơn vị: nghìn tỷ đồng (giá hiện hành)</p>
         <figure style="width: 80%; margin: auto" class="chart-container">
@@ -2237,7 +2199,7 @@
               <a
                 href="https://vi.wikipedia.org/wiki/B%E1%BA%AFc_Ninh"
                 target="_blank"
-                >wiki Bắc Ninh</a
+                >Wikipedia Bắc Ninh</a
               >
               |
               <a
@@ -2249,7 +2211,6 @@
             </p>
           </figcaption>
         </figure>
-
         <script>
           const ctx = document.getElementById("grdpChart");
           new Chart(ctx, {
@@ -2291,7 +2252,6 @@
         </script>
       </section>
       <hr />
-
       <section class="w3-row w3-padding-16" id="AMTHUC">
         <h1 class="w3-center" style="font-size: 50px">ẨM THỰC</h1>
         <h2>-Bắc Ninh có rất nhiều đặc sản nổi tiếng có thể kể đến như:</h2>
@@ -2658,7 +2618,6 @@
         </ol>
       </section>
       <hr />
-
       <section class="w3-row w3-padding-16" id="DULICH">
         <h1 class="w3-center" style="font-size: 50px">DU LỊCH</h1>
         <h2>-Bắc Ninh có những điểm du lịch nổi tiếng như:</h2>
@@ -2710,7 +2669,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -2756,7 +2714,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -2794,7 +2751,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -2832,7 +2788,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -2870,7 +2825,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -2908,7 +2862,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -2946,7 +2899,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -2984,7 +2936,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3022,7 +2973,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3060,7 +3010,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3098,7 +3047,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3136,7 +3084,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3174,7 +3121,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3212,7 +3158,6 @@
               </article>
             </details>
           </li>
-
           <li>
             <details>
               <summary class="w3-bar-item w3-button w3-padding">
@@ -3253,11 +3198,6 @@
         </ol>
       </section>
       <hr />
-      <script>
-        const summaries = document.querySelectorAll("summary");
-        summaries.forEach((s) => s.classList.add("ccc"));
-      </script>
-
       <section class="w3-row w3-padding-16" id="tiemnang">
         <h1 class="w3-center" style="font-size: 50px">TIỀM NĂNG PHÁT TRIỂN</h1>
         <article>
@@ -3274,7 +3214,6 @@
             </li>
             <li>Góp phần cải cách tiền lương và nâng cao đời sống cán bộ.</li>
           </ul>
-
           <h3>2. Về kinh tế – xã hội</h3>
           <ul>
             <li>
@@ -3302,7 +3241,6 @@
               phía Bắc”.
             </li>
           </ul>
-
           <h3>3. Về quốc phòng – an ninh</h3>
           <ul>
             <li>
@@ -3318,7 +3256,6 @@
               trật tự xã hội.
             </li>
           </ul>
-
           <h3>4. Về cải cách hành chính & dịch vụ công</h3>
           <ul>
             <li>
@@ -3334,7 +3271,6 @@
               cho người dân.
             </li>
           </ul>
-
           <p style="font-size: 15px" class="w3-center">
             (nguồn thông tin :
             <a
@@ -3351,14 +3287,5 @@
     <footer class="w3-center w3-light-grey w3-padding-32">
       <p>HẾT!</p>
     </footer>
-
-    <script>
-      function toggleMenu() {
-        const navMenu = document.getElementById("navMenu");
-        if (navMenu) {
-          navMenu.classList.toggle("w3-hide");
-        }
-      }
-    </script>
   </body>
 </html>
